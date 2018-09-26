@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{619E1739-E0C7-4AEC-989F-7FB18285C0EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoComunidad</RootNamespace>
+    <AssemblyName>ProyectoComunidad</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo Bueno 200.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\Altaavisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Altaavisos.Designer.cs">
+      <DependentUpon>Altaavisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Backup.Designer.cs">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Control Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Control Usuarios.Designer.cs">
+      <DependentUpon>Control Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Fincas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Fincas.Designer.cs">
+      <DependentUpon>Fincas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionAvisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionAvisos.Designer.cs">
+      <DependentUpon>GestionAvisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionDocumental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionDocumental.Designer.cs">
+      <DependentUpon>GestionDocumental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionFincas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionFincas.Designer.cs">
+      <DependentUpon>GestionFincas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionPropietarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionPropietarios.Designer.cs">
+      <DependentUpon>GestionPropietarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MenuInicio.Designer.cs">
+      <DependentUpon>MenuInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MisDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MisDatos.Designer.cs">
+      <DependentUpon>MisDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Presupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Presupuesto.Designer.cs">
+      <DependentUpon>Presupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Propietarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Propietarios.Designer.cs">
+      <DependentUpon>Propietarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Altaavisos.resx">
+      <DependentUpon>Altaavisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Backup.resx">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Control Usuarios.resx">
+      <DependentUpon>Control Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Fincas.resx">
+      <DependentUpon>Fincas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionAvisos.resx">
+      <DependentUpon>GestionAvisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionDocumental.resx">
+      <DependentUpon>GestionDocumental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionFincas.resx">
+      <DependentUpon>GestionFincas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionPropietarios.resx">
+      <DependentUpon>GestionPropietarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuInicio.resx">
+      <DependentUpon>MenuInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MisDatos.resx">
+      <DependentUpon>MisDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Presupuesto.resx">
+      <DependentUpon>Presupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Propietarios.resx">
+      <DependentUpon>Propietarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Llave seleccionado.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Tridente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Llave.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avisos.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AvisosAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backup.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackupAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banco.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BancoAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contabilidad.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ContabilidadAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documentos.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentosAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fincas.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FincasAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Informes.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InformesAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MisDatos.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MisDatosAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Propietarios.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PropietariosAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recibos.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecibosAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sistema.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SistemaAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gestioncomunidad.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GestioncomunidadAzul.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDatos\BaseDatos.csproj">
+      <Project>{45fa9993-4762-4dc3-b90a-24f711b39d4c}</Project>
+      <Name>BaseDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo Bueno 200.ico" />
+    <None Include="Resources\Gestionavisos.png" />
+    <None Include="Resources\Gestionclientes.png" />
+    <None Include="Resources\Gestiondocumentos.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
