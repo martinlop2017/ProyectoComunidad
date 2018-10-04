@@ -538,7 +538,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::ProyectoComunidad.Properties.Resources.MisDatos1;
             this.ClientSize = new System.Drawing.Size(876, 643);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textboxbic);
@@ -588,6 +588,7 @@
             this.Name = "MisDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C O M M U N I  T Y  ©";
+            this.Load += new System.EventHandler(this.MisDatos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

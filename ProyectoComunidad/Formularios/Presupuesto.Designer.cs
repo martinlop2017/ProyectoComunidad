@@ -520,6 +520,7 @@
             this.button2.Size = new System.Drawing.Size(188, 60);
             this.button2.TabIndex = 259;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Presupuesto
             // 
@@ -579,8 +580,10 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(709, 628);
             this.Name = "Presupuesto";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C O M M U N I  T Y  ©";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Presupuesto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

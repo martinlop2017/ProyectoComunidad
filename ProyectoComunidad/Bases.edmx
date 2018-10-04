@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AdministracionComunidadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Partidas">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="concepto" Type="nchar" MaxLength="100" />
+          <Property Name="grupo" Type="nchar" MaxLength="2" />
+          <Property Name="cuenta" Type="nchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="Propietarios">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="100" />
+          <Property Name="comunidad" Type="nchar" MaxLength="100" />
+          <Property Name="nif" Type="nchar" MaxLength="15" />
+          <Property Name="direcion" Type="nchar" MaxLength="200" />
+          <Property Name="localidad" Type="nchar" MaxLength="100" />
+          <Property Name="provincia" Type="nchar" MaxLength="100" />
+          <Property Name="cp" Type="nchar" MaxLength="10" />
+          <Property Name="fechaalta" Type="date" />
+          <Property Name="profesion" Type="nchar" MaxLength="40" />
+          <Property Name="telefono1" Type="nchar" MaxLength="19" />
+          <Property Name="telefono2" Type="nchar" MaxLength="19" />
+          <Property Name="cargo" Type="nchar" MaxLength="40" />
+          <Property Name="mail" Type="nchar" MaxLength="100" />
+          <Property Name="piso" Type="bit" />
+          <Property Name="numpiso" Type="nchar" MaxLength="40" />
+          <Property Name="coefpiso" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="local" Type="bit" />
+          <Property Name="numlocal" Type="nchar" MaxLength="40" />
+          <Property Name="coeflocal" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="garaje" Type="bit" />
+          <Property Name="numgaraje" Type="nchar" MaxLength="40" />
+          <Property Name="coefgaraje" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="trastero" Type="bit" />
+          <Property Name="numtrastero" Type="nchar" MaxLength="40" />
+          <Property Name="coeftrastero" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="iban1" Type="nchar" MaxLength="4" />
+          <Property Name="iban2" Type="nchar" MaxLength="4" />
+          <Property Name="iban3" Type="nchar" MaxLength="4" />
+          <Property Name="iban4" Type="nchar" MaxLength="4" />
+          <Property Name="iban5" Type="nchar" MaxLength="4" />
+          <Property Name="iban6" Type="nchar" MaxLength="4" />
+          <Property Name="observaciones" Type="nchar" MaxLength="400" />
+        </EntityType>
+        <EntityType Name="Propios">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="minombre" Type="nchar" MaxLength="100" />
+          <Property Name="micif" Type="nchar" MaxLength="15" />
+          <Property Name="midirecion" Type="nchar" MaxLength="200" />
+          <Property Name="mipoblacion" Type="nchar" MaxLength="100" />
+          <Property Name="miprovincia" Type="nchar" MaxLength="100" />
+          <Property Name="micp" Type="nchar" MaxLength="10" />
+          <Property Name="mitelef1" Type="nchar" MaxLength="20" />
+          <Property Name="mitelef2" Type="nchar" MaxLength="20" />
+          <Property Name="mifax" Type="nchar" MaxLength="20" />
+          <Property Name="micontacto" Type="nchar" MaxLength="50" />
+          <Property Name="mimail" Type="nchar" MaxLength="50" />
+          <Property Name="miiban1" Type="nchar" MaxLength="4" />
+          <Property Name="miiban2" Type="nchar" MaxLength="4" />
+          <Property Name="miiban3" Type="nchar" MaxLength="4" />
+          <Property Name="miiban4" Type="nchar" MaxLength="4" />
+          <Property Name="miiban5" Type="nchar" MaxLength="4" />
+          <Property Name="miiban6" Type="nchar" MaxLength="4" />
+          <Property Name="milogo" Type="nchar" MaxLength="200" />
+          <Property Name="miidentificadorbancario" Type="nchar" MaxLength="15" />
+          <Property Name="mibic" Type="nchar" MaxLength="15" />
+        </EntityType>
+        <EntityContainer Name="AdministracionComunidadModelStoreContainer">
+          <EntitySet Name="Partidas" EntityType="Self.Partidas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Propietarios" EntityType="Self.Propietarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Propios" EntityType="Self.Propios" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdministracionComunidadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Partidas">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="concepto" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="grupo" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="cuenta" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Propietarios">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="comunidad" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="nif" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="direcion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="localidad" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="provincia" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="cp" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="fechaalta" Type="DateTime" Precision="0" />
+          <Property Name="profesion" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="telefono1" Type="String" MaxLength="19" FixedLength="true" Unicode="true" />
+          <Property Name="telefono2" Type="String" MaxLength="19" FixedLength="true" Unicode="true" />
+          <Property Name="cargo" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="piso" Type="Boolean" />
+          <Property Name="numpiso" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="coefpiso" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="local" Type="Boolean" />
+          <Property Name="numlocal" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="coeflocal" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="garaje" Type="Boolean" />
+          <Property Name="numgaraje" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="coefgaraje" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="trastero" Type="Boolean" />
+          <Property Name="numtrastero" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="coeftrastero" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="iban1" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban2" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban3" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban4" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban5" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban6" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="observaciones" Type="String" MaxLength="400" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Propios">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="minombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="micif" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="midirecion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="mipoblacion" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="miprovincia" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="micp" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="mitelef1" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="mitelef2" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="mifax" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="micontacto" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="mimail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="miiban1" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="miiban2" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="miiban3" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="miiban4" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="miiban5" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="miiban6" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="milogo" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="miidentificadorbancario" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="mibic" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="AdministracionComunidadEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Partidas" EntityType="Self.Partidas" />
+          <EntitySet Name="Propietarios" EntityType="Self.Propietarios" />
+          <EntitySet Name="Propios" EntityType="Self.Propios" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdministracionComunidadModelStoreContainer" CdmEntityContainer="AdministracionComunidadEntities">
+          <EntitySetMapping Name="Partidas">
+            <EntityTypeMapping TypeName="AdministracionComunidadModel.Partidas">
+              <MappingFragment StoreEntitySet="Partidas">
+                <ScalarProperty Name="numerador" ColumnName="numerador" />
+                <ScalarProperty Name="concepto" ColumnName="concepto" />
+                <ScalarProperty Name="grupo" ColumnName="grupo" />
+                <ScalarProperty Name="cuenta" ColumnName="cuenta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Propietarios">
+            <EntityTypeMapping TypeName="AdministracionComunidadModel.Propietarios">
+              <MappingFragment StoreEntitySet="Propietarios">
+                <ScalarProperty Name="numerador" ColumnName="numerador" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="comunidad" ColumnName="comunidad" />
+                <ScalarProperty Name="nif" ColumnName="nif" />
+                <ScalarProperty Name="direcion" ColumnName="direcion" />
+                <ScalarProperty Name="localidad" ColumnName="localidad" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="cp" ColumnName="cp" />
+                <ScalarProperty Name="fechaalta" ColumnName="fechaalta" />
+                <ScalarProperty Name="profesion" ColumnName="profesion" />
+                <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+                <ScalarProperty Name="telefono2" ColumnName="telefono2" />
+                <ScalarProperty Name="cargo" ColumnName="cargo" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="piso" ColumnName="piso" />
+                <ScalarProperty Name="numpiso" ColumnName="numpiso" />
+                <ScalarProperty Name="coefpiso" ColumnName="coefpiso" />
+                <ScalarProperty Name="local" ColumnName="local" />
+                <ScalarProperty Name="numlocal" ColumnName="numlocal" />
+                <ScalarProperty Name="coeflocal" ColumnName="coeflocal" />
+                <ScalarProperty Name="garaje" ColumnName="garaje" />
+                <ScalarProperty Name="numgaraje" ColumnName="numgaraje" />
+                <ScalarProperty Name="coefgaraje" ColumnName="coefgaraje" />
+                <ScalarProperty Name="trastero" ColumnName="trastero" />
+                <ScalarProperty Name="numtrastero" ColumnName="numtrastero" />
+                <ScalarProperty Name="coeftrastero" ColumnName="coeftrastero" />
+                <ScalarProperty Name="iban1" ColumnName="iban1" />
+                <ScalarProperty Name="iban2" ColumnName="iban2" />
+                <ScalarProperty Name="iban3" ColumnName="iban3" />
+                <ScalarProperty Name="iban4" ColumnName="iban4" />
+                <ScalarProperty Name="iban5" ColumnName="iban5" />
+                <ScalarProperty Name="iban6" ColumnName="iban6" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Propios">
+            <EntityTypeMapping TypeName="AdministracionComunidadModel.Propios">
+              <MappingFragment StoreEntitySet="Propios">
+                <ScalarProperty Name="numerador" ColumnName="numerador" />
+                <ScalarProperty Name="minombre" ColumnName="minombre" />
+                <ScalarProperty Name="micif" ColumnName="micif" />
+                <ScalarProperty Name="midirecion" ColumnName="midirecion" />
+                <ScalarProperty Name="mipoblacion" ColumnName="mipoblacion" />
+                <ScalarProperty Name="miprovincia" ColumnName="miprovincia" />
+                <ScalarProperty Name="micp" ColumnName="micp" />
+                <ScalarProperty Name="mitelef1" ColumnName="mitelef1" />
+                <ScalarProperty Name="mitelef2" ColumnName="mitelef2" />
+                <ScalarProperty Name="mifax" ColumnName="mifax" />
+                <ScalarProperty Name="micontacto" ColumnName="micontacto" />
+                <ScalarProperty Name="mimail" ColumnName="mimail" />
+                <ScalarProperty Name="miiban1" ColumnName="miiban1" />
+                <ScalarProperty Name="miiban2" ColumnName="miiban2" />
+                <ScalarProperty Name="miiban3" ColumnName="miiban3" />
+                <ScalarProperty Name="miiban4" ColumnName="miiban4" />
+                <ScalarProperty Name="miiban5" ColumnName="miiban5" />
+                <ScalarProperty Name="miiban6" ColumnName="miiban6" />
+                <ScalarProperty Name="milogo" ColumnName="milogo" />
+                <ScalarProperty Name="miidentificadorbancario" ColumnName="miidentificadorbancario" />
+                <ScalarProperty Name="mibic" ColumnName="mibic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

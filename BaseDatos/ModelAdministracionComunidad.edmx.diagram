@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="7b37252634624cccae3d7183fb4878af" Name="Diagram1">
         <EntityTypeShape EntityType="AdministracionComunidadModel.Propios" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdministracionComunidadModel.Partidas" Width="1.875" PointX="2.5" PointY="0.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -26,5 +26,11 @@ namespace ProyectoComunidad.Formularios
         {
             Close();
         }
+
+        private void sumar_Click(object sender, EventArgs e)
+        {
+            Fincas form = new Fincas();
+            form.Show();
+        }
     }
 }

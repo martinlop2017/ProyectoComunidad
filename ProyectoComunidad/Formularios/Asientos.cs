@@ -10,27 +10,26 @@ using System.Windows.Forms;
 
 namespace ProyectoComunidad.Formularios
 {
-    public partial class GestionAvisos : Form
+    public partial class Asientos : Form
     {
-        public GestionAvisos()
+        public Asientos()
         {
             InitializeComponent();
         }
 
-        private void sumar_Click(object sender, EventArgs e)
-        {
-            Altaavisos form = new Altaavisos();
-            form.Show();
-        }
-
-        private void salir_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            panel1.Visible = false;
         }
     }
 }

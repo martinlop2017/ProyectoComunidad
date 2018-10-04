@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoComunidad.Formularios
 {
-    public partial class GestionAvisos : Form
+    public partial class GestionLiquidaciones : Form
     {
-        public GestionAvisos()
+        public GestionLiquidaciones()
         {
             InitializeComponent();
-        }
-
-        private void sumar_Click(object sender, EventArgs e)
-        {
-            Altaavisos form = new Altaavisos();
-            form.Show();
         }
 
         private void salir_Click(object sender, EventArgs e)
@@ -28,9 +22,10 @@ namespace ProyectoComunidad.Formularios
             Close();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void sumar_Click(object sender, EventArgs e)
         {
-
+            Cbs19 form = new Cbs19();
+            form.Show();
         }
     }
 }

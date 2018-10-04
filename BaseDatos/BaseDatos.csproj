@@ -58,6 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetComuniad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetComuniad.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModelAdministracionComunidad.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +77,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAdministracionComunidad.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Partidas.cs">
+      <DependentUpon>ModelAdministracionComunidad.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -91,6 +99,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelAdministracionComunidad.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DataSetComuniad.xsc">
+      <DependentUpon>DataSetComuniad.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetComuniad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetComuniad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetComuniad.xss">
+      <DependentUpon>DataSetComuniad.xsd</DependentUpon>
+    </None>
     <None Include="ModelAdministracionComunidad.edmx.diagram">
       <DependentUpon>ModelAdministracionComunidad.edmx</DependentUpon>
     </None>

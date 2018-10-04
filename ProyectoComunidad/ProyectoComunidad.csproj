@@ -36,11 +36,18 @@
     <ApplicationIcon>Logo Bueno 200.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,17 +59,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bases.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bases.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bases.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bases.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bases.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Altaavisos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Altaavisos.Designer.cs">
       <DependentUpon>Altaavisos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Asientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Asientos.Designer.cs">
+      <DependentUpon>Asientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Backup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Backup.Designer.cs">
       <DependentUpon>Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cbs19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cbs19.Designer.cs">
+      <DependentUpon>Cbs19.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Control Usuarios.cs">
       <SubType>Form</SubType>
@@ -75,6 +109,12 @@
     </Compile>
     <Compile Include="Formularios\Fincas.Designer.cs">
       <DependentUpon>Fincas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionAsientos.Designer.cs">
+      <DependentUpon>GestionAsientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\GestionAvisos.cs">
       <SubType>Form</SubType>
@@ -93,6 +133,18 @@
     </Compile>
     <Compile Include="Formularios\GestionFincas.Designer.cs">
       <DependentUpon>GestionFincas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionLiquidaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionLiquidaciones.Designer.cs">
+      <DependentUpon>GestionLiquidaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionListados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionListados.Designer.cs">
+      <DependentUpon>GestionListados.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\GestionPropietarios.cs">
       <SubType>Form</SubType>
@@ -124,19 +176,37 @@
     <Compile Include="Formularios\Propietarios.Designer.cs">
       <DependentUpon>Propietarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Partidas.cs">
+      <DependentUpon>Bases.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propietarios.cs">
+      <DependentUpon>Bases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Propios.cs">
+      <DependentUpon>Bases.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formularios\Altaavisos.resx">
       <DependentUpon>Altaavisos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Asientos.resx">
+      <DependentUpon>Asientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Backup.resx">
       <DependentUpon>Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cbs19.resx">
+      <DependentUpon>Cbs19.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Control Usuarios.resx">
       <DependentUpon>Control Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Fincas.resx">
       <DependentUpon>Fincas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionAsientos.resx">
+      <DependentUpon>GestionAsientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\GestionAvisos.resx">
       <DependentUpon>GestionAvisos.cs</DependentUpon>
@@ -146,6 +216,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\GestionFincas.resx">
       <DependentUpon>GestionFincas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionLiquidaciones.resx">
+      <DependentUpon>GestionLiquidaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionListados.resx">
+      <DependentUpon>GestionListados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\GestionPropietarios.resx">
       <DependentUpon>GestionPropietarios.cs</DependentUpon>
@@ -172,6 +248,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="Bases.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Bases.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Bases.edmx.diagram">
+      <DependentUpon>Bases.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -276,10 +360,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bases.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Bases.edmx</DependentUpon>
+      <LastGenOutput>Bases.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Bases.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Bases.edmx</DependentUpon>
+      <LastGenOutput>Bases.cs</LastGenOutput>
+    </Content>
     <Content Include="Logo Bueno 200.ico" />
+    <None Include="Resources\MisDatos.png" />
+    <None Include="Resources\Impresora.bmp" />
+    <None Include="Resources\Csb19Azul.bmp" />
+    <None Include="Resources\Csb19.bmp" />
+    <None Include="Resources\Gestionasiento.png" />
     <None Include="Resources\Gestionavisos.png" />
     <None Include="Resources\Gestionclientes.png" />
     <None Include="Resources\Gestiondocumentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

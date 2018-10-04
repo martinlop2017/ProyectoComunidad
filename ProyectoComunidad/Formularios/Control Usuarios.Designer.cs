@@ -184,6 +184,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "e C O M M U N I  T Y  ©";
+            this.Load += new System.EventHandler(this.Control_Usuarios_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

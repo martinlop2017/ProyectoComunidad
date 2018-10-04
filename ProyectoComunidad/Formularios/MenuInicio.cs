@@ -108,14 +108,14 @@ namespace ProyectoComunidad.Formularios
 
         private void botonbanco_MouseEnter(object sender, EventArgs e)
         {
-            botonbanco.BackgroundImage = ProyectoComunidad.Properties.Resources.BancoAzul;
+            botonbanco.BackgroundImage = ProyectoComunidad.Properties.Resources.Csb19Azul;
             panel2.Visible = false;
             panel3.Visible = false;
         }
 
         private void botonbanco_MouseLeave(object sender, EventArgs e)
         {
-            botonbanco.BackgroundImage = ProyectoComunidad.Properties.Resources.Banco;
+            botonbanco.BackgroundImage = ProyectoComunidad.Properties.Resources.Csb19;
         }
 
         private void botoninformes_MouseEnter(object sender, EventArgs e)
@@ -223,6 +223,18 @@ namespace ProyectoComunidad.Formularios
         private void botonavisos_Click(object sender, EventArgs e)
         {
             GestionAvisos form = new GestionAvisos();
+            form.Show();
+        }
+
+        private void botoncontabilidad_Click(object sender, EventArgs e)
+        {
+            GestionAsientos form = new GestionAsientos();
+            form.Show();
+        }
+
+        private void botonbanco_Click(object sender, EventArgs e)
+        {
+            GestionLiquidaciones form = new GestionLiquidaciones();
             form.Show();
         }
     }

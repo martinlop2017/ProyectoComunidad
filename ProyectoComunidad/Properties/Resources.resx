@@ -121,6 +121,9 @@
   <data name="Backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Backup.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Impresora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Impresora.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Informes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Informes.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,6 +132,9 @@
   </data>
   <data name="GestioncomunidadAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GestioncomunidadAzul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo Tridente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Tridente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Avisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avisos.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,11 +148,11 @@
   <data name="Gestioncomunidad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gestioncomunidad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo Tridente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo Tridente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Gestionclientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gestionclientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Csb19Azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Csb19Azul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BackupAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackupAzul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,11 +190,17 @@
   <data name="Banco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banco.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Gestionasiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gestionasiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sistema" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sistema.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Llave seleccionado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Llave seleccionado.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gestionavisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gestionavisos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PropietariosAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PropietariosAzul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,13 +211,16 @@
   <data name="Fincas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fincas.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Csb19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Csb19.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Llave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Llave.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Recibos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Recibos.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gestionavisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gestionavisos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MisDatos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MisDatos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -10,27 +10,27 @@ using System.Windows.Forms;
 
 namespace ProyectoComunidad.Formularios
 {
-    public partial class GestionAvisos : Form
+    public partial class GestionAsientos : Form
     {
-        public GestionAvisos()
+        public GestionAsientos()
         {
             InitializeComponent();
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void sumar_Click(object sender, EventArgs e)
         {
-            Altaavisos form = new Altaavisos();
+            Asientos form = new Asientos();
             form.Show();
         }
 
         private void salir_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

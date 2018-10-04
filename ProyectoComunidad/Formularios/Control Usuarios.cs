@@ -35,5 +35,10 @@ namespace ProyectoComunidad.Formularios
             MenuInicio form = new MenuInicio();
             form.Show();
         }
+
+        private void Control_Usuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
