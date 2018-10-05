@@ -263,6 +263,16 @@ namespace ProyectoComunidad.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gestionusuarios {
+            get {
+                object obj = ResourceManager.GetObject("Gestionusuarios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Impresora {
             get {
                 object obj = ResourceManager.GetObject("Impresora", resourceCulture);
@@ -406,6 +416,26 @@ namespace ProyectoComunidad.Properties {
         internal static System.Drawing.Bitmap SistemaAzul {
             get {
                 object obj = ResourceManager.GetObject("SistemaAzul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ususarios {
+            get {
+                object obj = ResourceManager.GetObject("Ususarios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UsusariosAzul {
+            get {
+                object obj = ResourceManager.GetObject("UsusariosAzul", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

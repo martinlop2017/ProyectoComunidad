@@ -59,6 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministracionComunidadDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdministracionComunidadDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Bases.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +79,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Bases.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Encriptar.cs" />
     <Compile Include="Formularios\Altaavisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     <Compile Include="Formularios\GestionPropietarios.Designer.cs">
       <DependentUpon>GestionPropietarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\GestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionUsuarios.Designer.cs">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\MenuInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +188,12 @@
     <Compile Include="Formularios\Propietarios.Designer.cs">
       <DependentUpon>Propietarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Partidas.cs">
       <DependentUpon>Bases.tt</DependentUpon>
     </Compile>
@@ -185,6 +203,9 @@
       <DependentUpon>Bases.tt</DependentUpon>
     </Compile>
     <Compile Include="Propios.cs">
+      <DependentUpon>Bases.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usantes.cs">
       <DependentUpon>Bases.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Formularios\Altaavisos.resx">
@@ -226,6 +247,9 @@
     <EmbeddedResource Include="Formularios\GestionPropietarios.resx">
       <DependentUpon>GestionPropietarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuInicio.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Propietarios.resx">
       <DependentUpon>Propietarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -252,6 +279,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Bases.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="AdministracionComunidadDataSet.xsc">
+      <DependentUpon>AdministracionComunidadDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdministracionComunidadDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdministracionComunidadDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdministracionComunidadDataSet.xss">
+      <DependentUpon>AdministracionComunidadDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Bases.edmx.diagram">
       <DependentUpon>Bases.edmx</DependentUpon>
     </None>
@@ -371,6 +409,9 @@
       <LastGenOutput>Bases.cs</LastGenOutput>
     </Content>
     <Content Include="Logo Bueno 200.ico" />
+    <None Include="Resources\Gestionusuarios.png" />
+    <None Include="Resources\UsusariosAzul.bmp" />
+    <None Include="Resources\Ususarios.bmp" />
     <None Include="Resources\MisDatos.png" />
     <None Include="Resources\Impresora.bmp" />
     <None Include="Resources\Csb19Azul.bmp" />

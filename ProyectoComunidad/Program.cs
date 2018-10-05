@@ -19,5 +19,17 @@ namespace ProyectoComunidad
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MenuInicio());
         }
+         
+    }
+    static class Globales
+    {
+        public static string llamadas;
+        public static int modificar;
+        /*   public static DateTime fechafactura;
+           public static string mesfactura;
+           public static decimal tipoiva;
+           public static string ruta;
+           public static DateTime anofactura;
+       */
     }
 }

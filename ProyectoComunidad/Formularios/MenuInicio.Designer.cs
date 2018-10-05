@@ -41,11 +41,12 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.BotonPropios = new System.Windows.Forms.Button();
-            this.botonbackup = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.botonfincas = new System.Windows.Forms.Button();
             this.BotonPropietarios = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BotonPropios = new System.Windows.Forms.Button();
+            this.botonbackup = new System.Windows.Forms.Button();
             this.botonGComunidades = new System.Windows.Forms.Button();
             this.botondocumentos = new System.Windows.Forms.Button();
             this.botonavisos = new System.Windows.Forms.Button();
@@ -161,39 +162,14 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.BotonPropios);
             this.panel2.Controls.Add(this.botonbackup);
             this.panel2.Location = new System.Drawing.Point(33, 161);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(109, 234);
+            this.panel2.Size = new System.Drawing.Size(109, 358);
             this.panel2.TabIndex = 46;
             this.panel2.Visible = false;
-            // 
-            // BotonPropios
-            // 
-            this.BotonPropios.BackgroundImage = global::ProyectoComunidad.Properties.Resources.MisDatos;
-            this.BotonPropios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BotonPropios.Location = new System.Drawing.Point(0, 3);
-            this.BotonPropios.Name = "BotonPropios";
-            this.BotonPropios.Size = new System.Drawing.Size(109, 105);
-            this.BotonPropios.TabIndex = 33;
-            this.BotonPropios.UseVisualStyleBackColor = true;
-            this.BotonPropios.Click += new System.EventHandler(this.BotonPropios_Click);
-            this.BotonPropios.MouseEnter += new System.EventHandler(this.BotonPropios_MouseEnter);
-            this.BotonPropios.MouseLeave += new System.EventHandler(this.BotonPropios_MouseLeave);
-            // 
-            // botonbackup
-            // 
-            this.botonbackup.BackgroundImage = global::ProyectoComunidad.Properties.Resources.Backup;
-            this.botonbackup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonbackup.Location = new System.Drawing.Point(0, 119);
-            this.botonbackup.Name = "botonbackup";
-            this.botonbackup.Size = new System.Drawing.Size(109, 105);
-            this.botonbackup.TabIndex = 37;
-            this.botonbackup.UseVisualStyleBackColor = true;
-            this.botonbackup.Click += new System.EventHandler(this.botonbackup_Click);
-            this.botonbackup.MouseEnter += new System.EventHandler(this.botonbackup_MouseEnter);
-            this.botonbackup.MouseLeave += new System.EventHandler(this.botonbackup_MouseLeave);
             // 
             // panel3
             // 
@@ -230,6 +206,45 @@
             this.BotonPropietarios.Click += new System.EventHandler(this.BotonPropietarios_Click);
             this.BotonPropietarios.MouseEnter += new System.EventHandler(this.BotonPropietarios_MouseEnter);
             this.BotonPropietarios.MouseLeave += new System.EventHandler(this.BotonPropietarios_MouseLeave);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ProyectoComunidad.Properties.Resources.Ususarios;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(0, 119);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 105);
+            this.button1.TabIndex = 38;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            // 
+            // BotonPropios
+            // 
+            this.BotonPropios.BackgroundImage = global::ProyectoComunidad.Properties.Resources.MisDatos;
+            this.BotonPropios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BotonPropios.Location = new System.Drawing.Point(0, 3);
+            this.BotonPropios.Name = "BotonPropios";
+            this.BotonPropios.Size = new System.Drawing.Size(109, 105);
+            this.BotonPropios.TabIndex = 33;
+            this.BotonPropios.UseVisualStyleBackColor = true;
+            this.BotonPropios.Click += new System.EventHandler(this.BotonPropios_Click);
+            this.BotonPropios.MouseEnter += new System.EventHandler(this.BotonPropios_MouseEnter);
+            this.BotonPropios.MouseLeave += new System.EventHandler(this.BotonPropios_MouseLeave);
+            // 
+            // botonbackup
+            // 
+            this.botonbackup.BackgroundImage = global::ProyectoComunidad.Properties.Resources.Backup;
+            this.botonbackup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonbackup.Location = new System.Drawing.Point(0, 232);
+            this.botonbackup.Name = "botonbackup";
+            this.botonbackup.Size = new System.Drawing.Size(109, 105);
+            this.botonbackup.TabIndex = 37;
+            this.botonbackup.UseVisualStyleBackColor = true;
+            this.botonbackup.Click += new System.EventHandler(this.botonbackup_Click);
+            this.botonbackup.MouseEnter += new System.EventHandler(this.botonbackup_MouseEnter);
+            this.botonbackup.MouseLeave += new System.EventHandler(this.botonbackup_MouseLeave);
             // 
             // botonGComunidades
             // 
@@ -396,5 +411,6 @@
         private System.Windows.Forms.Button botonGComunidades;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
     }
 }

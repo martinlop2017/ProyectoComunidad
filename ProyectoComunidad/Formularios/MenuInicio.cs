@@ -237,5 +237,21 @@ namespace ProyectoComunidad.Formularios
             GestionLiquidaciones form = new GestionLiquidaciones();
             form.Show();
         }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackgroundImage = ProyectoComunidad.Properties.Resources.UsusariosAzul;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackgroundImage = ProyectoComunidad.Properties.Resources.Ususarios;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GestionUsuarios form = new GestionUsuarios();
+            form.Show();
+        }
     }
 }

@@ -28,5 +28,6 @@ namespace ProyectoComunidad
         public DbSet<Partidas> Partidas { get; set; }
         public DbSet<Propietarios> Propietarios { get; set; }
         public DbSet<Propios> Propios { get; set; }
+        public DbSet<Usantes> Usantes { get; set; }
     }
 }

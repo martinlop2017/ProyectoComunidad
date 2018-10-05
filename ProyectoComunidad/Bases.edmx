@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AdministracionComunidadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AdministracionComunidadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Partidas">
           <Key>
             <PropertyRef Name="numerador" />
@@ -78,13 +78,26 @@
           <Property Name="miidentificadorbancario" Type="nchar" MaxLength="15" />
           <Property Name="mibic" Type="nchar" MaxLength="15" />
         </EntityType>
+        <EntityType Name="Usantes">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="100" />
+          <Property Name="password" Type="nchar" MaxLength="200" />
+          <Property Name="pregunta" Type="nchar" MaxLength="200" />
+          <Property Name="respuesta" Type="nchar" MaxLength="100" />
+          <Property Name="activo" Type="bit" />
+          <Property Name="cod" Type="numeric" Precision="3" Scale="0" />
+          <Property Name="nivel" Type="nchar" MaxLength="15" />
+        </EntityType>
         <EntityContainer Name="AdministracionComunidadModelStoreContainer">
           <EntitySet Name="Partidas" EntityType="Self.Partidas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Propietarios" EntityType="Self.Propietarios" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Propios" EntityType="Self.Propios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usantes" EntityType="Self.Usantes" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AdministracionComunidadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -165,7 +178,21 @@
           <EntitySet Name="Partidas" EntityType="Self.Partidas" />
           <EntitySet Name="Propietarios" EntityType="Self.Propietarios" />
           <EntitySet Name="Propios" EntityType="Self.Propios" />
+          <EntitySet Name="Usantes" EntityType="AdministracionComunidadModel.Usantes" />
         </EntityContainer>
+        <EntityType Name="Usantes">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="pregunta" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="respuesta" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="activo" Type="Boolean" />
+          <Property Name="cod" Type="Decimal" Precision="3" Scale="0" />
+          <Property Name="nivel" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -245,6 +272,20 @@
                 <ScalarProperty Name="milogo" ColumnName="milogo" />
                 <ScalarProperty Name="miidentificadorbancario" ColumnName="miidentificadorbancario" />
                 <ScalarProperty Name="mibic" ColumnName="mibic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usantes">
+            <EntityTypeMapping TypeName="AdministracionComunidadModel.Usantes">
+              <MappingFragment StoreEntitySet="Usantes">
+                <ScalarProperty Name="nivel" ColumnName="nivel" />
+                <ScalarProperty Name="cod" ColumnName="cod" />
+                <ScalarProperty Name="activo" ColumnName="activo" />
+                <ScalarProperty Name="respuesta" ColumnName="respuesta" />
+                <ScalarProperty Name="pregunta" ColumnName="pregunta" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="numerador" ColumnName="numerador" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -127,6 +127,9 @@
   <data name="Informes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Informes.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BancoAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BancoAzul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Contabilidad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Contabilidad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,8 +163,8 @@
   <data name="ContabilidadAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ContabilidadAzul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MisDatos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MisDatos.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MisDatos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MisDatos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Propietarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Propietarios.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +190,9 @@
   <data name="Documentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Documentos.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ususarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ususarios.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Banco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banco.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,11 +208,14 @@
   <data name="Gestionavisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gestionavisos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="UsusariosAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UsusariosAzul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PropietariosAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PropietariosAzul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BancoAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BancoAzul.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MisDatos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MisDatos.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fincas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fincas.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +229,7 @@
   <data name="Recibos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Recibos.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MisDatos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MisDatos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Gestionusuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gestionusuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
