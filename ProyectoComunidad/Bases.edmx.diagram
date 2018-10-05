@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="AdministracionComunidadModel.Propietarios" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AdministracionComunidadModel.Propios" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AdministracionComunidadModel.Usantes" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="AdministracionComunidadModel.Comunidades" Width="1.5" PointX="6.5" PointY="0.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

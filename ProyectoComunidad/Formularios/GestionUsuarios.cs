@@ -123,5 +123,74 @@ namespace ProyectoComunidad.Formularios
                 MessageBox.Show("No ha sido posible eliminar los datos", "Error 103");
             }
         }
+
+        private void sumar_MouseEnter(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+
+        }
+
+        private void sumar_MouseLeave(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+        }
+
+        private void eliminar_MouseEnter(object sender, EventArgs e)
+        {
+            label2.Visible = true;
+        }
+
+        private void eliminar_MouseLeave(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+        }
+
+        private void modificar_MouseEnter(object sender, EventArgs e)
+        {
+            label3.Visible = true;
+        }
+
+        private void modificar_MouseLeave(object sender, EventArgs e)
+        {
+            label3.Visible = false;
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            label4.Visible = true;
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            label4.Visible = false;
+        }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+            label4.Visible = true;
+        }
+
+        private void textBox1_MouseLeave(object sender, EventArgs e)
+        {
+            label4.Visible = false;
+        }
+
+        private void salir_MouseEnter(object sender, EventArgs e)
+        {
+            label5.Visible = true;
+        }
+
+        private void salir_MouseLeave(object sender, EventArgs e)
+        {
+            label5.Visible = false;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var busqueda = from c in bd.Usantes select c;
+            busqueda = busqueda.Where(c => c.nombre.Contains(textBox1.Text)).OrderBy(x => x.nombre);
+
+            dgvUsuario.DataSource = busqueda.ToList();
+        }
     }
 }

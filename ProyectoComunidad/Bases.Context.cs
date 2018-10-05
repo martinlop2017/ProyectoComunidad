@@ -29,5 +29,6 @@ namespace ProyectoComunidad
         public DbSet<Propietarios> Propietarios { get; set; }
         public DbSet<Propios> Propios { get; set; }
         public DbSet<Usantes> Usantes { get; set; }
+        public DbSet<Comunidades> Comunidades { get; set; }
     }
 }

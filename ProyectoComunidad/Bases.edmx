@@ -5,6 +5,51 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="AdministracionComunidadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Comunidades">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="nombrecomunidad" Type="nchar" MaxLength="100" />
+          <Property Name="nif" Type="nchar" MaxLength="20" />
+          <Property Name="direcion" Type="nchar" MaxLength="250" />
+          <Property Name="cp" Type="nchar" MaxLength="12" />
+          <Property Name="localidad" Type="nchar" MaxLength="50" />
+          <Property Name="provincia" Type="nchar" MaxLength="40" />
+          <Property Name="mail" Type="nchar" MaxLength="100" />
+          <Property Name="telefono1" Type="nchar" MaxLength="20" />
+          <Property Name="telefono2" Type="nchar" MaxLength="20" />
+          <Property Name="iban1" Type="nchar" MaxLength="4" />
+          <Property Name="iban2" Type="nchar" MaxLength="4" />
+          <Property Name="iban3" Type="nchar" MaxLength="4" />
+          <Property Name="iban4" Type="nchar" MaxLength="4" />
+          <Property Name="iban5" Type="nchar" MaxLength="4" />
+          <Property Name="iban6" Type="nchar" MaxLength="4" />
+          <Property Name="presupuesto" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="porcoeficiente" Type="bit" />
+          <Property Name="porcuotafija" Type="bit" />
+          <Property Name="cuotamensual" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="saldoinicial" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="agua" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="electricidad" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="telefonia" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="reparaciones" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="indemnizaciones" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="limpieza" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="ascensor" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="extintores" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="jardines" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="otros" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="compras" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="gestoria" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="letrados" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="sueldos" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="segsocial" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="seguros" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="gastosfinancieros" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="numeropropietarios" Type="numeric" Precision="3" Scale="0" />
+          <Property Name="activa" Type="bit" />
+        </EntityType>
         <EntityType Name="Partidas">
           <Key>
             <PropertyRef Name="numerador" />
@@ -92,6 +137,7 @@
           <Property Name="nivel" Type="nchar" MaxLength="15" />
         </EntityType>
         <EntityContainer Name="AdministracionComunidadModelStoreContainer">
+          <EntitySet Name="Comunidades" EntityType="Self.Comunidades" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Partidas" EntityType="Self.Partidas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Propietarios" EntityType="Self.Propietarios" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Propios" EntityType="Self.Propios" Schema="dbo" store:Type="Tables" />
@@ -179,6 +225,7 @@
           <EntitySet Name="Propietarios" EntityType="Self.Propietarios" />
           <EntitySet Name="Propios" EntityType="Self.Propios" />
           <EntitySet Name="Usantes" EntityType="AdministracionComunidadModel.Usantes" />
+          <EntitySet Name="Comunidades" EntityType="AdministracionComunidadModel.Comunidades" />
         </EntityContainer>
         <EntityType Name="Usantes">
           <Key>
@@ -192,6 +239,51 @@
           <Property Name="activo" Type="Boolean" />
           <Property Name="cod" Type="Decimal" Precision="3" Scale="0" />
           <Property Name="nivel" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Comunidades">
+          <Key>
+            <PropertyRef Name="numerador" />
+          </Key>
+          <Property Name="numerador" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="nombrecomunidad" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="nif" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="direcion" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Name="cp" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Name="localidad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="provincia" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="telefono1" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="telefono2" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="iban1" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban2" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban3" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban4" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban5" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="iban6" Type="String" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Name="presupuesto" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="porcoeficiente" Type="Boolean" />
+          <Property Name="porcuotafija" Type="Boolean" />
+          <Property Name="cuotamensual" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="saldoinicial" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="agua" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="electricidad" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="telefonia" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="reparaciones" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="indemnizaciones" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="limpieza" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ascensor" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="extintores" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="jardines" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="otros" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="compras" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="gestoria" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="letrados" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="sueldos" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="segsocial" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="seguros" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="gastosfinancieros" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="numeropropietarios" Type="Decimal" Precision="3" Scale="0" />
+          <Property Name="activa" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -285,6 +377,52 @@
                 <ScalarProperty Name="pregunta" ColumnName="pregunta" />
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="numerador" ColumnName="numerador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comunidades">
+            <EntityTypeMapping TypeName="AdministracionComunidadModel.Comunidades">
+              <MappingFragment StoreEntitySet="Comunidades">
+                <ScalarProperty Name="activa" ColumnName="activa" />
+                <ScalarProperty Name="numeropropietarios" ColumnName="numeropropietarios" />
+                <ScalarProperty Name="gastosfinancieros" ColumnName="gastosfinancieros" />
+                <ScalarProperty Name="seguros" ColumnName="seguros" />
+                <ScalarProperty Name="segsocial" ColumnName="segsocial" />
+                <ScalarProperty Name="sueldos" ColumnName="sueldos" />
+                <ScalarProperty Name="letrados" ColumnName="letrados" />
+                <ScalarProperty Name="gestoria" ColumnName="gestoria" />
+                <ScalarProperty Name="compras" ColumnName="compras" />
+                <ScalarProperty Name="otros" ColumnName="otros" />
+                <ScalarProperty Name="jardines" ColumnName="jardines" />
+                <ScalarProperty Name="extintores" ColumnName="extintores" />
+                <ScalarProperty Name="ascensor" ColumnName="ascensor" />
+                <ScalarProperty Name="limpieza" ColumnName="limpieza" />
+                <ScalarProperty Name="indemnizaciones" ColumnName="indemnizaciones" />
+                <ScalarProperty Name="reparaciones" ColumnName="reparaciones" />
+                <ScalarProperty Name="telefonia" ColumnName="telefonia" />
+                <ScalarProperty Name="electricidad" ColumnName="electricidad" />
+                <ScalarProperty Name="agua" ColumnName="agua" />
+                <ScalarProperty Name="saldoinicial" ColumnName="saldoinicial" />
+                <ScalarProperty Name="cuotamensual" ColumnName="cuotamensual" />
+                <ScalarProperty Name="porcuotafija" ColumnName="porcuotafija" />
+                <ScalarProperty Name="porcoeficiente" ColumnName="porcoeficiente" />
+                <ScalarProperty Name="presupuesto" ColumnName="presupuesto" />
+                <ScalarProperty Name="iban6" ColumnName="iban6" />
+                <ScalarProperty Name="iban5" ColumnName="iban5" />
+                <ScalarProperty Name="iban4" ColumnName="iban4" />
+                <ScalarProperty Name="iban3" ColumnName="iban3" />
+                <ScalarProperty Name="iban2" ColumnName="iban2" />
+                <ScalarProperty Name="iban1" ColumnName="iban1" />
+                <ScalarProperty Name="telefono2" ColumnName="telefono2" />
+                <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="localidad" ColumnName="localidad" />
+                <ScalarProperty Name="cp" ColumnName="cp" />
+                <ScalarProperty Name="direcion" ColumnName="direcion" />
+                <ScalarProperty Name="nif" ColumnName="nif" />
+                <ScalarProperty Name="nombrecomunidad" ColumnName="nombrecomunidad" />
                 <ScalarProperty Name="numerador" ColumnName="numerador" />
               </MappingFragment>
             </EntityTypeMapping>

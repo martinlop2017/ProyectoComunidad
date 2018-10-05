@@ -142,6 +142,12 @@
         s9ln46RTAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="comunidadesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>255, 17</value>
+  </metadata>
+  <metadata name="administracionComunidadDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="salir.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk2uHwAAAAAAADYAAAAoAAAAMgAAADUAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAA////////
@@ -718,6 +724,9 @@
         ////////////////////////////////////////////////////////////////////////
 </value>
   </data>
+  <metadata name="comunidadesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>459, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAyMgAAAEAIAAIhwIAFgAAACgAAADIAAAAkAEAAAEAIAAAAAAAAHECAHQSAAB0EgAAAAAAAAAA

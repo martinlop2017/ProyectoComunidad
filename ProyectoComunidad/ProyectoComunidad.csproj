@@ -80,6 +80,9 @@
       <DependentUpon>Bases.edmx</DependentUpon>
     </Compile>
     <Compile Include="Clases\Encriptar.cs" />
+    <Compile Include="Comunidades.cs">
+      <DependentUpon>Bases.tt</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Altaavisos.cs">
       <SubType>Form</SubType>
     </Compile>

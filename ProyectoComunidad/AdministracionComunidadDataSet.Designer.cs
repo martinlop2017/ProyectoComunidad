@@ -32,6 +32,8 @@ namespace ProyectoComunidad {
         
         private UsantesDataTable tableUsantes;
         
+        private ComunidadesDataTable tableComunidades;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -71,6 +73,9 @@ namespace ProyectoComunidad {
                 }
                 if ((ds.Tables["Usantes"] != null)) {
                     base.Tables.Add(new UsantesDataTable(ds.Tables["Usantes"]));
+                }
+                if ((ds.Tables["Comunidades"] != null)) {
+                    base.Tables.Add(new ComunidadesDataTable(ds.Tables["Comunidades"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -127,6 +132,16 @@ namespace ProyectoComunidad {
         public UsantesDataTable Usantes {
             get {
                 return this.tableUsantes;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ComunidadesDataTable Comunidades {
+            get {
+                return this.tableComunidades;
             }
         }
         
@@ -209,6 +224,9 @@ namespace ProyectoComunidad {
                 if ((ds.Tables["Usantes"] != null)) {
                     base.Tables.Add(new UsantesDataTable(ds.Tables["Usantes"]));
                 }
+                if ((ds.Tables["Comunidades"] != null)) {
+                    base.Tables.Add(new ComunidadesDataTable(ds.Tables["Comunidades"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -266,6 +284,12 @@ namespace ProyectoComunidad {
                     this.tableUsantes.InitVars();
                 }
             }
+            this.tableComunidades = ((ComunidadesDataTable)(base.Tables["Comunidades"]));
+            if ((initTable == true)) {
+                if ((this.tableComunidades != null)) {
+                    this.tableComunidades.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -284,6 +308,8 @@ namespace ProyectoComunidad {
             base.Tables.Add(this.tablePropios);
             this.tableUsantes = new UsantesDataTable();
             base.Tables.Add(this.tableUsantes);
+            this.tableComunidades = new ComunidadesDataTable();
+            base.Tables.Add(this.tableComunidades);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -307,6 +333,12 @@ namespace ProyectoComunidad {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeUsantes() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeComunidades() {
             return false;
         }
         
@@ -376,6 +408,9 @@ namespace ProyectoComunidad {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void UsantesRowChangeEventHandler(object sender, UsantesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void ComunidadesRowChangeEventHandler(object sender, ComunidadesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2383,6 +2418,865 @@ namespace ProyectoComunidad {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ComunidadesDataTable : global::System.Data.TypedTableBase<ComunidadesRow> {
+            
+            private global::System.Data.DataColumn columnnumerador;
+            
+            private global::System.Data.DataColumn columnnombrecomunidad;
+            
+            private global::System.Data.DataColumn columnnif;
+            
+            private global::System.Data.DataColumn columndirecion;
+            
+            private global::System.Data.DataColumn columncp;
+            
+            private global::System.Data.DataColumn columnlocalidad;
+            
+            private global::System.Data.DataColumn columnprovincia;
+            
+            private global::System.Data.DataColumn columnmail;
+            
+            private global::System.Data.DataColumn columntelefono1;
+            
+            private global::System.Data.DataColumn columntelefono2;
+            
+            private global::System.Data.DataColumn columniban1;
+            
+            private global::System.Data.DataColumn columniban2;
+            
+            private global::System.Data.DataColumn columniban3;
+            
+            private global::System.Data.DataColumn columniban4;
+            
+            private global::System.Data.DataColumn columniban5;
+            
+            private global::System.Data.DataColumn columniban6;
+            
+            private global::System.Data.DataColumn columnpresupuesto;
+            
+            private global::System.Data.DataColumn columnporcoeficiente;
+            
+            private global::System.Data.DataColumn columnporcuotafija;
+            
+            private global::System.Data.DataColumn columncuotamensual;
+            
+            private global::System.Data.DataColumn columnsaldoinicial;
+            
+            private global::System.Data.DataColumn columnagua;
+            
+            private global::System.Data.DataColumn columnelectricidad;
+            
+            private global::System.Data.DataColumn columntelefonia;
+            
+            private global::System.Data.DataColumn columnreparaciones;
+            
+            private global::System.Data.DataColumn columnindemnizaciones;
+            
+            private global::System.Data.DataColumn columnlimpieza;
+            
+            private global::System.Data.DataColumn columnascensor;
+            
+            private global::System.Data.DataColumn columnextintores;
+            
+            private global::System.Data.DataColumn columnjardines;
+            
+            private global::System.Data.DataColumn columnotros;
+            
+            private global::System.Data.DataColumn columncompras;
+            
+            private global::System.Data.DataColumn columngestoria;
+            
+            private global::System.Data.DataColumn columnletrados;
+            
+            private global::System.Data.DataColumn columnsueldos;
+            
+            private global::System.Data.DataColumn columnsegsocial;
+            
+            private global::System.Data.DataColumn columnseguros;
+            
+            private global::System.Data.DataColumn columngastosfinancieros;
+            
+            private global::System.Data.DataColumn columnnumeropropietarios;
+            
+            private global::System.Data.DataColumn columnactiva;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ComunidadesDataTable() {
+                this.TableName = "Comunidades";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ComunidadesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected ComunidadesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn numeradorColumn {
+                get {
+                    return this.columnnumerador;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombrecomunidadColumn {
+                get {
+                    return this.columnnombrecomunidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nifColumn {
+                get {
+                    return this.columnnif;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn direcionColumn {
+                get {
+                    return this.columndirecion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cpColumn {
+                get {
+                    return this.columncp;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn localidadColumn {
+                get {
+                    return this.columnlocalidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn provinciaColumn {
+                get {
+                    return this.columnprovincia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn mailColumn {
+                get {
+                    return this.columnmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefono1Column {
+                get {
+                    return this.columntelefono1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefono2Column {
+                get {
+                    return this.columntelefono2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iban1Column {
+                get {
+                    return this.columniban1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iban2Column {
+                get {
+                    return this.columniban2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iban3Column {
+                get {
+                    return this.columniban3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iban4Column {
+                get {
+                    return this.columniban4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iban5Column {
+                get {
+                    return this.columniban5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iban6Column {
+                get {
+                    return this.columniban6;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn presupuestoColumn {
+                get {
+                    return this.columnpresupuesto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn porcoeficienteColumn {
+                get {
+                    return this.columnporcoeficiente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn porcuotafijaColumn {
+                get {
+                    return this.columnporcuotafija;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cuotamensualColumn {
+                get {
+                    return this.columncuotamensual;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn saldoinicialColumn {
+                get {
+                    return this.columnsaldoinicial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn aguaColumn {
+                get {
+                    return this.columnagua;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn electricidadColumn {
+                get {
+                    return this.columnelectricidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefoniaColumn {
+                get {
+                    return this.columntelefonia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn reparacionesColumn {
+                get {
+                    return this.columnreparaciones;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn indemnizacionesColumn {
+                get {
+                    return this.columnindemnizaciones;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn limpiezaColumn {
+                get {
+                    return this.columnlimpieza;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ascensorColumn {
+                get {
+                    return this.columnascensor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn extintoresColumn {
+                get {
+                    return this.columnextintores;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn jardinesColumn {
+                get {
+                    return this.columnjardines;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn otrosColumn {
+                get {
+                    return this.columnotros;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn comprasColumn {
+                get {
+                    return this.columncompras;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn gestoriaColumn {
+                get {
+                    return this.columngestoria;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn letradosColumn {
+                get {
+                    return this.columnletrados;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn sueldosColumn {
+                get {
+                    return this.columnsueldos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn segsocialColumn {
+                get {
+                    return this.columnsegsocial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn segurosColumn {
+                get {
+                    return this.columnseguros;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn gastosfinancierosColumn {
+                get {
+                    return this.columngastosfinancieros;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn numeropropietariosColumn {
+                get {
+                    return this.columnnumeropropietarios;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn activaColumn {
+                get {
+                    return this.columnactiva;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ComunidadesRow this[int index] {
+                get {
+                    return ((ComunidadesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ComunidadesRowChangeEventHandler ComunidadesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ComunidadesRowChangeEventHandler ComunidadesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ComunidadesRowChangeEventHandler ComunidadesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ComunidadesRowChangeEventHandler ComunidadesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddComunidadesRow(ComunidadesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ComunidadesRow AddComunidadesRow(
+                        decimal numerador, 
+                        string nombrecomunidad, 
+                        string nif, 
+                        string direcion, 
+                        string cp, 
+                        string localidad, 
+                        string provincia, 
+                        string mail, 
+                        string telefono1, 
+                        string telefono2, 
+                        string iban1, 
+                        string iban2, 
+                        string iban3, 
+                        string iban4, 
+                        string iban5, 
+                        string iban6, 
+                        decimal presupuesto, 
+                        bool porcoeficiente, 
+                        bool porcuotafija, 
+                        decimal cuotamensual, 
+                        decimal saldoinicial, 
+                        decimal agua, 
+                        decimal electricidad, 
+                        decimal telefonia, 
+                        decimal reparaciones, 
+                        decimal indemnizaciones, 
+                        decimal limpieza, 
+                        decimal ascensor, 
+                        decimal extintores, 
+                        decimal jardines, 
+                        decimal otros, 
+                        decimal compras, 
+                        decimal gestoria, 
+                        decimal letrados, 
+                        decimal sueldos, 
+                        decimal segsocial, 
+                        decimal seguros, 
+                        decimal gastosfinancieros, 
+                        decimal numeropropietarios, 
+                        bool activa) {
+                ComunidadesRow rowComunidadesRow = ((ComunidadesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        numerador,
+                        nombrecomunidad,
+                        nif,
+                        direcion,
+                        cp,
+                        localidad,
+                        provincia,
+                        mail,
+                        telefono1,
+                        telefono2,
+                        iban1,
+                        iban2,
+                        iban3,
+                        iban4,
+                        iban5,
+                        iban6,
+                        presupuesto,
+                        porcoeficiente,
+                        porcuotafija,
+                        cuotamensual,
+                        saldoinicial,
+                        agua,
+                        electricidad,
+                        telefonia,
+                        reparaciones,
+                        indemnizaciones,
+                        limpieza,
+                        ascensor,
+                        extintores,
+                        jardines,
+                        otros,
+                        compras,
+                        gestoria,
+                        letrados,
+                        sueldos,
+                        segsocial,
+                        seguros,
+                        gastosfinancieros,
+                        numeropropietarios,
+                        activa};
+                rowComunidadesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowComunidadesRow);
+                return rowComunidadesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ComunidadesRow FindBynumerador(decimal numerador) {
+                return ((ComunidadesRow)(this.Rows.Find(new object[] {
+                            numerador})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ComunidadesDataTable cln = ((ComunidadesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ComunidadesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnnumerador = base.Columns["numerador"];
+                this.columnnombrecomunidad = base.Columns["nombrecomunidad"];
+                this.columnnif = base.Columns["nif"];
+                this.columndirecion = base.Columns["direcion"];
+                this.columncp = base.Columns["cp"];
+                this.columnlocalidad = base.Columns["localidad"];
+                this.columnprovincia = base.Columns["provincia"];
+                this.columnmail = base.Columns["mail"];
+                this.columntelefono1 = base.Columns["telefono1"];
+                this.columntelefono2 = base.Columns["telefono2"];
+                this.columniban1 = base.Columns["iban1"];
+                this.columniban2 = base.Columns["iban2"];
+                this.columniban3 = base.Columns["iban3"];
+                this.columniban4 = base.Columns["iban4"];
+                this.columniban5 = base.Columns["iban5"];
+                this.columniban6 = base.Columns["iban6"];
+                this.columnpresupuesto = base.Columns["presupuesto"];
+                this.columnporcoeficiente = base.Columns["porcoeficiente"];
+                this.columnporcuotafija = base.Columns["porcuotafija"];
+                this.columncuotamensual = base.Columns["cuotamensual"];
+                this.columnsaldoinicial = base.Columns["saldoinicial"];
+                this.columnagua = base.Columns["agua"];
+                this.columnelectricidad = base.Columns["electricidad"];
+                this.columntelefonia = base.Columns["telefonia"];
+                this.columnreparaciones = base.Columns["reparaciones"];
+                this.columnindemnizaciones = base.Columns["indemnizaciones"];
+                this.columnlimpieza = base.Columns["limpieza"];
+                this.columnascensor = base.Columns["ascensor"];
+                this.columnextintores = base.Columns["extintores"];
+                this.columnjardines = base.Columns["jardines"];
+                this.columnotros = base.Columns["otros"];
+                this.columncompras = base.Columns["compras"];
+                this.columngestoria = base.Columns["gestoria"];
+                this.columnletrados = base.Columns["letrados"];
+                this.columnsueldos = base.Columns["sueldos"];
+                this.columnsegsocial = base.Columns["segsocial"];
+                this.columnseguros = base.Columns["seguros"];
+                this.columngastosfinancieros = base.Columns["gastosfinancieros"];
+                this.columnnumeropropietarios = base.Columns["numeropropietarios"];
+                this.columnactiva = base.Columns["activa"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnnumerador = new global::System.Data.DataColumn("numerador", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumerador);
+                this.columnnombrecomunidad = new global::System.Data.DataColumn("nombrecomunidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombrecomunidad);
+                this.columnnif = new global::System.Data.DataColumn("nif", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnif);
+                this.columndirecion = new global::System.Data.DataColumn("direcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndirecion);
+                this.columncp = new global::System.Data.DataColumn("cp", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncp);
+                this.columnlocalidad = new global::System.Data.DataColumn("localidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlocalidad);
+                this.columnprovincia = new global::System.Data.DataColumn("provincia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprovincia);
+                this.columnmail = new global::System.Data.DataColumn("mail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmail);
+                this.columntelefono1 = new global::System.Data.DataColumn("telefono1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono1);
+                this.columntelefono2 = new global::System.Data.DataColumn("telefono2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono2);
+                this.columniban1 = new global::System.Data.DataColumn("iban1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniban1);
+                this.columniban2 = new global::System.Data.DataColumn("iban2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniban2);
+                this.columniban3 = new global::System.Data.DataColumn("iban3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniban3);
+                this.columniban4 = new global::System.Data.DataColumn("iban4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniban4);
+                this.columniban5 = new global::System.Data.DataColumn("iban5", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniban5);
+                this.columniban6 = new global::System.Data.DataColumn("iban6", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniban6);
+                this.columnpresupuesto = new global::System.Data.DataColumn("presupuesto", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpresupuesto);
+                this.columnporcoeficiente = new global::System.Data.DataColumn("porcoeficiente", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnporcoeficiente);
+                this.columnporcuotafija = new global::System.Data.DataColumn("porcuotafija", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnporcuotafija);
+                this.columncuotamensual = new global::System.Data.DataColumn("cuotamensual", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncuotamensual);
+                this.columnsaldoinicial = new global::System.Data.DataColumn("saldoinicial", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsaldoinicial);
+                this.columnagua = new global::System.Data.DataColumn("agua", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnagua);
+                this.columnelectricidad = new global::System.Data.DataColumn("electricidad", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnelectricidad);
+                this.columntelefonia = new global::System.Data.DataColumn("telefonia", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefonia);
+                this.columnreparaciones = new global::System.Data.DataColumn("reparaciones", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreparaciones);
+                this.columnindemnizaciones = new global::System.Data.DataColumn("indemnizaciones", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnindemnizaciones);
+                this.columnlimpieza = new global::System.Data.DataColumn("limpieza", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlimpieza);
+                this.columnascensor = new global::System.Data.DataColumn("ascensor", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnascensor);
+                this.columnextintores = new global::System.Data.DataColumn("extintores", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnextintores);
+                this.columnjardines = new global::System.Data.DataColumn("jardines", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnjardines);
+                this.columnotros = new global::System.Data.DataColumn("otros", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnotros);
+                this.columncompras = new global::System.Data.DataColumn("compras", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncompras);
+                this.columngestoria = new global::System.Data.DataColumn("gestoria", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngestoria);
+                this.columnletrados = new global::System.Data.DataColumn("letrados", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnletrados);
+                this.columnsueldos = new global::System.Data.DataColumn("sueldos", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsueldos);
+                this.columnsegsocial = new global::System.Data.DataColumn("segsocial", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsegsocial);
+                this.columnseguros = new global::System.Data.DataColumn("seguros", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnseguros);
+                this.columngastosfinancieros = new global::System.Data.DataColumn("gastosfinancieros", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngastosfinancieros);
+                this.columnnumeropropietarios = new global::System.Data.DataColumn("numeropropietarios", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumeropropietarios);
+                this.columnactiva = new global::System.Data.DataColumn("activa", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactiva);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnnumerador}, true));
+                this.columnnumerador.AllowDBNull = false;
+                this.columnnumerador.Unique = true;
+                this.columnnombrecomunidad.MaxLength = 100;
+                this.columnnif.MaxLength = 20;
+                this.columndirecion.MaxLength = 250;
+                this.columncp.MaxLength = 12;
+                this.columnlocalidad.MaxLength = 50;
+                this.columnprovincia.MaxLength = 40;
+                this.columnmail.MaxLength = 100;
+                this.columntelefono1.MaxLength = 20;
+                this.columntelefono2.MaxLength = 20;
+                this.columniban1.MaxLength = 4;
+                this.columniban2.MaxLength = 4;
+                this.columniban3.MaxLength = 4;
+                this.columniban4.MaxLength = 4;
+                this.columniban5.MaxLength = 4;
+                this.columniban6.MaxLength = 4;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ComunidadesRow NewComunidadesRow() {
+                return ((ComunidadesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ComunidadesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ComunidadesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ComunidadesRowChanged != null)) {
+                    this.ComunidadesRowChanged(this, new ComunidadesRowChangeEvent(((ComunidadesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ComunidadesRowChanging != null)) {
+                    this.ComunidadesRowChanging(this, new ComunidadesRowChangeEvent(((ComunidadesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ComunidadesRowDeleted != null)) {
+                    this.ComunidadesRowDeleted(this, new ComunidadesRowChangeEvent(((ComunidadesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ComunidadesRowDeleting != null)) {
+                    this.ComunidadesRowDeleting(this, new ComunidadesRowChangeEvent(((ComunidadesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveComunidadesRow(ComunidadesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AdministracionComunidadDataSet ds = new AdministracionComunidadDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ComunidadesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class PartidasRow : global::System.Data.DataRow {
@@ -4224,6 +5118,1124 @@ namespace ProyectoComunidad {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ComunidadesRow : global::System.Data.DataRow {
+            
+            private ComunidadesDataTable tableComunidades;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ComunidadesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableComunidades = ((ComunidadesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal numerador {
+                get {
+                    return ((decimal)(this[this.tableComunidades.numeradorColumn]));
+                }
+                set {
+                    this[this.tableComunidades.numeradorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombrecomunidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.nombrecomunidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombrecomunidad\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.nombrecomunidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nif {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.nifColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nif\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.nifColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string direcion {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.direcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'direcion\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.direcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cp {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.cpColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cp\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.cpColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string localidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.localidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'localidad\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.localidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string provincia {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.provinciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'provincia\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.provinciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string mail {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.mailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'mail\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.mailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string telefono1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.telefono1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono1\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.telefono1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string telefono2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.telefono2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono2\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.telefono2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iban1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.iban1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'iban1\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.iban1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iban2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.iban2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'iban2\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.iban2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iban3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.iban3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'iban3\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.iban3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iban4 {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.iban4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'iban4\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.iban4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iban5 {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.iban5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'iban5\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.iban5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iban6 {
+                get {
+                    try {
+                        return ((string)(this[this.tableComunidades.iban6Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'iban6\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.iban6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal presupuesto {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.presupuestoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'presupuesto\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.presupuestoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool porcoeficiente {
+                get {
+                    try {
+                        return ((bool)(this[this.tableComunidades.porcoeficienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'porcoeficiente\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.porcoeficienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool porcuotafija {
+                get {
+                    try {
+                        return ((bool)(this[this.tableComunidades.porcuotafijaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'porcuotafija\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.porcuotafijaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal cuotamensual {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.cuotamensualColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cuotamensual\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.cuotamensualColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal saldoinicial {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.saldoinicialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'saldoinicial\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.saldoinicialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal agua {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.aguaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'agua\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.aguaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal electricidad {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.electricidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'electricidad\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.electricidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal telefonia {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.telefoniaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefonia\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.telefoniaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal reparaciones {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.reparacionesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'reparaciones\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.reparacionesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal indemnizaciones {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.indemnizacionesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'indemnizaciones\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.indemnizacionesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal limpieza {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.limpiezaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'limpieza\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.limpiezaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ascensor {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.ascensorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ascensor\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.ascensorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal extintores {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.extintoresColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'extintores\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.extintoresColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal jardines {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.jardinesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'jardines\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.jardinesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal otros {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.otrosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'otros\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.otrosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal compras {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.comprasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'compras\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.comprasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal gestoria {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.gestoriaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'gestoria\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.gestoriaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal letrados {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.letradosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'letrados\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.letradosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal sueldos {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.sueldosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'sueldos\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.sueldosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal segsocial {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.segsocialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'segsocial\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.segsocialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal seguros {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.segurosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'seguros\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.segurosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal gastosfinancieros {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.gastosfinancierosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'gastosfinancieros\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.gastosfinancierosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal numeropropietarios {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableComunidades.numeropropietariosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'numeropropietarios\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.numeropropietariosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool activa {
+                get {
+                    try {
+                        return ((bool)(this[this.tableComunidades.activaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'activa\' de la tabla \'Comunidades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableComunidades.activaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnombrecomunidadNull() {
+                return this.IsNull(this.tableComunidades.nombrecomunidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnombrecomunidadNull() {
+                this[this.tableComunidades.nombrecomunidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnifNull() {
+                return this.IsNull(this.tableComunidades.nifColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnifNull() {
+                this[this.tableComunidades.nifColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdirecionNull() {
+                return this.IsNull(this.tableComunidades.direcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdirecionNull() {
+                this[this.tableComunidades.direcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscpNull() {
+                return this.IsNull(this.tableComunidades.cpColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcpNull() {
+                this[this.tableComunidades.cpColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IslocalidadNull() {
+                return this.IsNull(this.tableComunidades.localidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetlocalidadNull() {
+                this[this.tableComunidades.localidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprovinciaNull() {
+                return this.IsNull(this.tableComunidades.provinciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprovinciaNull() {
+                this[this.tableComunidades.provinciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsmailNull() {
+                return this.IsNull(this.tableComunidades.mailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetmailNull() {
+                this[this.tableComunidades.mailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istelefono1Null() {
+                return this.IsNull(this.tableComunidades.telefono1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settelefono1Null() {
+                this[this.tableComunidades.telefono1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istelefono2Null() {
+                return this.IsNull(this.tableComunidades.telefono2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settelefono2Null() {
+                this[this.tableComunidades.telefono2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isiban1Null() {
+                return this.IsNull(this.tableComunidades.iban1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setiban1Null() {
+                this[this.tableComunidades.iban1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isiban2Null() {
+                return this.IsNull(this.tableComunidades.iban2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setiban2Null() {
+                this[this.tableComunidades.iban2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isiban3Null() {
+                return this.IsNull(this.tableComunidades.iban3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setiban3Null() {
+                this[this.tableComunidades.iban3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isiban4Null() {
+                return this.IsNull(this.tableComunidades.iban4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setiban4Null() {
+                this[this.tableComunidades.iban4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isiban5Null() {
+                return this.IsNull(this.tableComunidades.iban5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setiban5Null() {
+                this[this.tableComunidades.iban5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isiban6Null() {
+                return this.IsNull(this.tableComunidades.iban6Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setiban6Null() {
+                this[this.tableComunidades.iban6Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspresupuestoNull() {
+                return this.IsNull(this.tableComunidades.presupuestoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpresupuestoNull() {
+                this[this.tableComunidades.presupuestoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsporcoeficienteNull() {
+                return this.IsNull(this.tableComunidades.porcoeficienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetporcoeficienteNull() {
+                this[this.tableComunidades.porcoeficienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsporcuotafijaNull() {
+                return this.IsNull(this.tableComunidades.porcuotafijaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetporcuotafijaNull() {
+                this[this.tableComunidades.porcuotafijaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscuotamensualNull() {
+                return this.IsNull(this.tableComunidades.cuotamensualColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcuotamensualNull() {
+                this[this.tableComunidades.cuotamensualColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssaldoinicialNull() {
+                return this.IsNull(this.tableComunidades.saldoinicialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsaldoinicialNull() {
+                this[this.tableComunidades.saldoinicialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsaguaNull() {
+                return this.IsNull(this.tableComunidades.aguaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetaguaNull() {
+                this[this.tableComunidades.aguaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IselectricidadNull() {
+                return this.IsNull(this.tableComunidades.electricidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetelectricidadNull() {
+                this[this.tableComunidades.electricidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstelefoniaNull() {
+                return this.IsNull(this.tableComunidades.telefoniaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettelefoniaNull() {
+                this[this.tableComunidades.telefoniaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsreparacionesNull() {
+                return this.IsNull(this.tableComunidades.reparacionesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetreparacionesNull() {
+                this[this.tableComunidades.reparacionesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsindemnizacionesNull() {
+                return this.IsNull(this.tableComunidades.indemnizacionesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetindemnizacionesNull() {
+                this[this.tableComunidades.indemnizacionesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IslimpiezaNull() {
+                return this.IsNull(this.tableComunidades.limpiezaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetlimpiezaNull() {
+                this[this.tableComunidades.limpiezaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsascensorNull() {
+                return this.IsNull(this.tableComunidades.ascensorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetascensorNull() {
+                this[this.tableComunidades.ascensorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsextintoresNull() {
+                return this.IsNull(this.tableComunidades.extintoresColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetextintoresNull() {
+                this[this.tableComunidades.extintoresColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsjardinesNull() {
+                return this.IsNull(this.tableComunidades.jardinesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetjardinesNull() {
+                this[this.tableComunidades.jardinesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsotrosNull() {
+                return this.IsNull(this.tableComunidades.otrosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetotrosNull() {
+                this[this.tableComunidades.otrosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscomprasNull() {
+                return this.IsNull(this.tableComunidades.comprasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcomprasNull() {
+                this[this.tableComunidades.comprasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsgestoriaNull() {
+                return this.IsNull(this.tableComunidades.gestoriaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetgestoriaNull() {
+                this[this.tableComunidades.gestoriaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsletradosNull() {
+                return this.IsNull(this.tableComunidades.letradosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetletradosNull() {
+                this[this.tableComunidades.letradosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssueldosNull() {
+                return this.IsNull(this.tableComunidades.sueldosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsueldosNull() {
+                this[this.tableComunidades.sueldosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssegsocialNull() {
+                return this.IsNull(this.tableComunidades.segsocialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsegsocialNull() {
+                this[this.tableComunidades.segsocialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssegurosNull() {
+                return this.IsNull(this.tableComunidades.segurosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsegurosNull() {
+                this[this.tableComunidades.segurosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsgastosfinancierosNull() {
+                return this.IsNull(this.tableComunidades.gastosfinancierosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetgastosfinancierosNull() {
+                this[this.tableComunidades.gastosfinancierosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnumeropropietariosNull() {
+                return this.IsNull(this.tableComunidades.numeropropietariosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnumeropropietariosNull() {
+                this[this.tableComunidades.numeropropietariosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsactivaNull() {
+                return this.IsNull(this.tableComunidades.activaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetactivaNull() {
+                this[this.tableComunidades.activaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4345,6 +6357,40 @@ namespace ProyectoComunidad {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public UsantesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class ComunidadesRowChangeEvent : global::System.EventArgs {
+            
+            private ComunidadesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ComunidadesRowChangeEvent(ComunidadesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ComunidadesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -8169,6 +10215,2007 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ComunidadesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public ComunidadesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Comunidades";
+            tableMapping.ColumnMappings.Add("numerador", "numerador");
+            tableMapping.ColumnMappings.Add("nombrecomunidad", "nombrecomunidad");
+            tableMapping.ColumnMappings.Add("nif", "nif");
+            tableMapping.ColumnMappings.Add("direcion", "direcion");
+            tableMapping.ColumnMappings.Add("cp", "cp");
+            tableMapping.ColumnMappings.Add("localidad", "localidad");
+            tableMapping.ColumnMappings.Add("provincia", "provincia");
+            tableMapping.ColumnMappings.Add("mail", "mail");
+            tableMapping.ColumnMappings.Add("telefono1", "telefono1");
+            tableMapping.ColumnMappings.Add("telefono2", "telefono2");
+            tableMapping.ColumnMappings.Add("iban1", "iban1");
+            tableMapping.ColumnMappings.Add("iban2", "iban2");
+            tableMapping.ColumnMappings.Add("iban3", "iban3");
+            tableMapping.ColumnMappings.Add("iban4", "iban4");
+            tableMapping.ColumnMappings.Add("iban5", "iban5");
+            tableMapping.ColumnMappings.Add("iban6", "iban6");
+            tableMapping.ColumnMappings.Add("presupuesto", "presupuesto");
+            tableMapping.ColumnMappings.Add("porcoeficiente", "porcoeficiente");
+            tableMapping.ColumnMappings.Add("porcuotafija", "porcuotafija");
+            tableMapping.ColumnMappings.Add("cuotamensual", "cuotamensual");
+            tableMapping.ColumnMappings.Add("saldoinicial", "saldoinicial");
+            tableMapping.ColumnMappings.Add("agua", "agua");
+            tableMapping.ColumnMappings.Add("electricidad", "electricidad");
+            tableMapping.ColumnMappings.Add("telefonia", "telefonia");
+            tableMapping.ColumnMappings.Add("reparaciones", "reparaciones");
+            tableMapping.ColumnMappings.Add("indemnizaciones", "indemnizaciones");
+            tableMapping.ColumnMappings.Add("limpieza", "limpieza");
+            tableMapping.ColumnMappings.Add("ascensor", "ascensor");
+            tableMapping.ColumnMappings.Add("extintores", "extintores");
+            tableMapping.ColumnMappings.Add("jardines", "jardines");
+            tableMapping.ColumnMappings.Add("otros", "otros");
+            tableMapping.ColumnMappings.Add("compras", "compras");
+            tableMapping.ColumnMappings.Add("gestoria", "gestoria");
+            tableMapping.ColumnMappings.Add("letrados", "letrados");
+            tableMapping.ColumnMappings.Add("sueldos", "sueldos");
+            tableMapping.ColumnMappings.Add("segsocial", "segsocial");
+            tableMapping.ColumnMappings.Add("seguros", "seguros");
+            tableMapping.ColumnMappings.Add("gastosfinancieros", "gastosfinancieros");
+            tableMapping.ColumnMappings.Add("numeropropietarios", "numeropropietarios");
+            tableMapping.ColumnMappings.Add("activa", "activa");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Comunidades] WHERE (([numerador] = @Original_numerador) AND ((" +
+                "@IsNull_nombrecomunidad = 1 AND [nombrecomunidad] IS NULL) OR ([nombrecomunidad]" +
+                " = @Original_nombrecomunidad)) AND ((@IsNull_nif = 1 AND [nif] IS NULL) OR ([nif" +
+                "] = @Original_nif)) AND ((@IsNull_direcion = 1 AND [direcion] IS NULL) OR ([dire" +
+                "cion] = @Original_direcion)) AND ((@IsNull_cp = 1 AND [cp] IS NULL) OR ([cp] = @" +
+                "Original_cp)) AND ((@IsNull_localidad = 1 AND [localidad] IS NULL) OR ([localida" +
+                "d] = @Original_localidad)) AND ((@IsNull_provincia = 1 AND [provincia] IS NULL) " +
+                "OR ([provincia] = @Original_provincia)) AND ((@IsNull_mail = 1 AND [mail] IS NUL" +
+                "L) OR ([mail] = @Original_mail)) AND ((@IsNull_telefono1 = 1 AND [telefono1] IS " +
+                "NULL) OR ([telefono1] = @Original_telefono1)) AND ((@IsNull_telefono2 = 1 AND [t" +
+                "elefono2] IS NULL) OR ([telefono2] = @Original_telefono2)) AND ((@IsNull_iban1 =" +
+                " 1 AND [iban1] IS NULL) OR ([iban1] = @Original_iban1)) AND ((@IsNull_iban2 = 1 " +
+                "AND [iban2] IS NULL) OR ([iban2] = @Original_iban2)) AND ((@IsNull_iban3 = 1 AND" +
+                " [iban3] IS NULL) OR ([iban3] = @Original_iban3)) AND ((@IsNull_iban4 = 1 AND [i" +
+                "ban4] IS NULL) OR ([iban4] = @Original_iban4)) AND ((@IsNull_iban5 = 1 AND [iban" +
+                "5] IS NULL) OR ([iban5] = @Original_iban5)) AND ((@IsNull_iban6 = 1 AND [iban6] " +
+                "IS NULL) OR ([iban6] = @Original_iban6)) AND ((@IsNull_presupuesto = 1 AND [pres" +
+                "upuesto] IS NULL) OR ([presupuesto] = @Original_presupuesto)) AND ((@IsNull_porc" +
+                "oeficiente = 1 AND [porcoeficiente] IS NULL) OR ([porcoeficiente] = @Original_po" +
+                "rcoeficiente)) AND ((@IsNull_porcuotafija = 1 AND [porcuotafija] IS NULL) OR ([p" +
+                "orcuotafija] = @Original_porcuotafija)) AND ((@IsNull_cuotamensual = 1 AND [cuot" +
+                "amensual] IS NULL) OR ([cuotamensual] = @Original_cuotamensual)) AND ((@IsNull_s" +
+                "aldoinicial = 1 AND [saldoinicial] IS NULL) OR ([saldoinicial] = @Original_saldo" +
+                "inicial)) AND ((@IsNull_agua = 1 AND [agua] IS NULL) OR ([agua] = @Original_agua" +
+                ")) AND ((@IsNull_electricidad = 1 AND [electricidad] IS NULL) OR ([electricidad]" +
+                " = @Original_electricidad)) AND ((@IsNull_telefonia = 1 AND [telefonia] IS NULL)" +
+                " OR ([telefonia] = @Original_telefonia)) AND ((@IsNull_reparaciones = 1 AND [rep" +
+                "araciones] IS NULL) OR ([reparaciones] = @Original_reparaciones)) AND ((@IsNull_" +
+                "indemnizaciones = 1 AND [indemnizaciones] IS NULL) OR ([indemnizaciones] = @Orig" +
+                "inal_indemnizaciones)) AND ((@IsNull_limpieza = 1 AND [limpieza] IS NULL) OR ([l" +
+                "impieza] = @Original_limpieza)) AND ((@IsNull_ascensor = 1 AND [ascensor] IS NUL" +
+                "L) OR ([ascensor] = @Original_ascensor)) AND ((@IsNull_extintores = 1 AND [extin" +
+                "tores] IS NULL) OR ([extintores] = @Original_extintores)) AND ((@IsNull_jardines" +
+                " = 1 AND [jardines] IS NULL) OR ([jardines] = @Original_jardines)) AND ((@IsNull" +
+                "_otros = 1 AND [otros] IS NULL) OR ([otros] = @Original_otros)) AND ((@IsNull_co" +
+                "mpras = 1 AND [compras] IS NULL) OR ([compras] = @Original_compras)) AND ((@IsNu" +
+                "ll_gestoria = 1 AND [gestoria] IS NULL) OR ([gestoria] = @Original_gestoria)) AN" +
+                "D ((@IsNull_letrados = 1 AND [letrados] IS NULL) OR ([letrados] = @Original_letr" +
+                "ados)) AND ((@IsNull_sueldos = 1 AND [sueldos] IS NULL) OR ([sueldos] = @Origina" +
+                "l_sueldos)) AND ((@IsNull_segsocial = 1 AND [segsocial] IS NULL) OR ([segsocial]" +
+                " = @Original_segsocial)) AND ((@IsNull_seguros = 1 AND [seguros] IS NULL) OR ([s" +
+                "eguros] = @Original_seguros)) AND ((@IsNull_gastosfinancieros = 1 AND [gastosfin" +
+                "ancieros] IS NULL) OR ([gastosfinancieros] = @Original_gastosfinancieros)) AND (" +
+                "(@IsNull_numeropropietarios = 1 AND [numeropropietarios] IS NULL) OR ([numeropro" +
+                "pietarios] = @Original_numeropropietarios)) AND ((@IsNull_activa = 1 AND [activa" +
+                "] IS NULL) OR ([activa] = @Original_activa)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numerador", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "numerador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nombrecomunidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombrecomunidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombrecomunidad", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombrecomunidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nif", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nif", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nif", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nif", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_direcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "direcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_direcion", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "direcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cp", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_localidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "localidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_localidad", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "localidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_provincia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "provincia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_provincia", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "provincia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_mail", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mail", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mail", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telefono1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefono1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telefono2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefono2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban3", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban4", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban4", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban5", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban6", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_presupuesto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "presupuesto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_presupuesto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "presupuesto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_porcoeficiente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcoeficiente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_porcoeficiente", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcoeficiente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_porcuotafija", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcuotafija", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_porcuotafija", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcuotafija", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cuotamensual", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cuotamensual", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cuotamensual", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "cuotamensual", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_saldoinicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "saldoinicial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_saldoinicial", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "saldoinicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_agua", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agua", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_agua", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "agua", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_electricidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "electricidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_electricidad", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "electricidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telefonia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefonia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefonia", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "telefonia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_reparaciones", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reparaciones", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reparaciones", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "reparaciones", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_indemnizaciones", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "indemnizaciones", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_indemnizaciones", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "indemnizaciones", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_limpieza", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "limpieza", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_limpieza", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "limpieza", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ascensor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ascensor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ascensor", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ascensor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_extintores", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "extintores", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_extintores", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "extintores", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_jardines", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jardines", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_jardines", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "jardines", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_otros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "otros", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_otros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "otros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_compras", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "compras", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_compras", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "compras", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_gestoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gestoria", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gestoria", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gestoria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_letrados", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "letrados", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_letrados", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "letrados", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sueldos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sueldos", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sueldos", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "sueldos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_segsocial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "segsocial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_segsocial", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "segsocial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_seguros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "seguros", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_seguros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "seguros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_gastosfinancieros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gastosfinancieros", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gastosfinancieros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gastosfinancieros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_numeropropietarios", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeropropietarios", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeropropietarios", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "numeropropietarios", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_activa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "activa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_activa", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "activa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Comunidades] ([numerador], [nombrecomunidad], [nif], [direcion], [cp], [localidad], [provincia], [mail], [telefono1], [telefono2], [iban1], [iban2], [iban3], [iban4], [iban5], [iban6], [presupuesto], [porcoeficiente], [porcuotafija], [cuotamensual], [saldoinicial], [agua], [electricidad], [telefonia], [reparaciones], [indemnizaciones], [limpieza], [ascensor], [extintores], [jardines], [otros], [compras], [gestoria], [letrados], [sueldos], [segsocial], [seguros], [gastosfinancieros], [numeropropietarios], [activa]) VALUES (@numerador, @nombrecomunidad, @nif, @direcion, @cp, @localidad, @provincia, @mail, @telefono1, @telefono2, @iban1, @iban2, @iban3, @iban4, @iban5, @iban6, @presupuesto, @porcoeficiente, @porcuotafija, @cuotamensual, @saldoinicial, @agua, @electricidad, @telefonia, @reparaciones, @indemnizaciones, @limpieza, @ascensor, @extintores, @jardines, @otros, @compras, @gestoria, @letrados, @sueldos, @segsocial, @seguros, @gastosfinancieros, @numeropropietarios, @activa);
+SELECT numerador, nombrecomunidad, nif, direcion, cp, localidad, provincia, mail, telefono1, telefono2, iban1, iban2, iban3, iban4, iban5, iban6, presupuesto, porcoeficiente, porcuotafija, cuotamensual, saldoinicial, agua, electricidad, telefonia, reparaciones, indemnizaciones, limpieza, ascensor, extintores, jardines, otros, compras, gestoria, letrados, sueldos, segsocial, seguros, gastosfinancieros, numeropropietarios, activa FROM Comunidades WHERE (numerador = @numerador)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numerador", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "numerador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombrecomunidad", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombrecomunidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nif", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nif", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@direcion", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "direcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cp", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@localidad", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "localidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@provincia", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "provincia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefono1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefono2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban3", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban4", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban5", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban6", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@presupuesto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "presupuesto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@porcoeficiente", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcoeficiente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@porcuotafija", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcuotafija", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cuotamensual", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "cuotamensual", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@saldoinicial", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "saldoinicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agua", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "agua", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@electricidad", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "electricidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefonia", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "telefonia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reparaciones", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "reparaciones", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@indemnizaciones", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "indemnizaciones", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@limpieza", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "limpieza", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ascensor", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ascensor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@extintores", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "extintores", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@jardines", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "jardines", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@otros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "otros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@compras", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "compras", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gestoria", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gestoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@letrados", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "letrados", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sueldos", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "sueldos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@segsocial", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "segsocial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seguros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "seguros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gastosfinancieros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gastosfinancieros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeropropietarios", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "numeropropietarios", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@activa", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "activa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Comunidades] SET [numerador] = @numerador, [nombrecomunidad] = @nom" +
+                "brecomunidad, [nif] = @nif, [direcion] = @direcion, [cp] = @cp, [localidad] = @l" +
+                "ocalidad, [provincia] = @provincia, [mail] = @mail, [telefono1] = @telefono1, [t" +
+                "elefono2] = @telefono2, [iban1] = @iban1, [iban2] = @iban2, [iban3] = @iban3, [i" +
+                "ban4] = @iban4, [iban5] = @iban5, [iban6] = @iban6, [presupuesto] = @presupuesto" +
+                ", [porcoeficiente] = @porcoeficiente, [porcuotafija] = @porcuotafija, [cuotamens" +
+                "ual] = @cuotamensual, [saldoinicial] = @saldoinicial, [agua] = @agua, [electrici" +
+                "dad] = @electricidad, [telefonia] = @telefonia, [reparaciones] = @reparaciones, " +
+                "[indemnizaciones] = @indemnizaciones, [limpieza] = @limpieza, [ascensor] = @asce" +
+                "nsor, [extintores] = @extintores, [jardines] = @jardines, [otros] = @otros, [com" +
+                "pras] = @compras, [gestoria] = @gestoria, [letrados] = @letrados, [sueldos] = @s" +
+                "ueldos, [segsocial] = @segsocial, [seguros] = @seguros, [gastosfinancieros] = @g" +
+                "astosfinancieros, [numeropropietarios] = @numeropropietarios, [activa] = @activa" +
+                " WHERE (([numerador] = @Original_numerador) AND ((@IsNull_nombrecomunidad = 1 AN" +
+                "D [nombrecomunidad] IS NULL) OR ([nombrecomunidad] = @Original_nombrecomunidad))" +
+                " AND ((@IsNull_nif = 1 AND [nif] IS NULL) OR ([nif] = @Original_nif)) AND ((@IsN" +
+                "ull_direcion = 1 AND [direcion] IS NULL) OR ([direcion] = @Original_direcion)) A" +
+                "ND ((@IsNull_cp = 1 AND [cp] IS NULL) OR ([cp] = @Original_cp)) AND ((@IsNull_lo" +
+                "calidad = 1 AND [localidad] IS NULL) OR ([localidad] = @Original_localidad)) AND" +
+                " ((@IsNull_provincia = 1 AND [provincia] IS NULL) OR ([provincia] = @Original_pr" +
+                "ovincia)) AND ((@IsNull_mail = 1 AND [mail] IS NULL) OR ([mail] = @Original_mail" +
+                ")) AND ((@IsNull_telefono1 = 1 AND [telefono1] IS NULL) OR ([telefono1] = @Origi" +
+                "nal_telefono1)) AND ((@IsNull_telefono2 = 1 AND [telefono2] IS NULL) OR ([telefo" +
+                "no2] = @Original_telefono2)) AND ((@IsNull_iban1 = 1 AND [iban1] IS NULL) OR ([i" +
+                "ban1] = @Original_iban1)) AND ((@IsNull_iban2 = 1 AND [iban2] IS NULL) OR ([iban" +
+                "2] = @Original_iban2)) AND ((@IsNull_iban3 = 1 AND [iban3] IS NULL) OR ([iban3] " +
+                "= @Original_iban3)) AND ((@IsNull_iban4 = 1 AND [iban4] IS NULL) OR ([iban4] = @" +
+                "Original_iban4)) AND ((@IsNull_iban5 = 1 AND [iban5] IS NULL) OR ([iban5] = @Ori" +
+                "ginal_iban5)) AND ((@IsNull_iban6 = 1 AND [iban6] IS NULL) OR ([iban6] = @Origin" +
+                "al_iban6)) AND ((@IsNull_presupuesto = 1 AND [presupuesto] IS NULL) OR ([presupu" +
+                "esto] = @Original_presupuesto)) AND ((@IsNull_porcoeficiente = 1 AND [porcoefici" +
+                "ente] IS NULL) OR ([porcoeficiente] = @Original_porcoeficiente)) AND ((@IsNull_p" +
+                "orcuotafija = 1 AND [porcuotafija] IS NULL) OR ([porcuotafija] = @Original_porcu" +
+                "otafija)) AND ((@IsNull_cuotamensual = 1 AND [cuotamensual] IS NULL) OR ([cuotam" +
+                "ensual] = @Original_cuotamensual)) AND ((@IsNull_saldoinicial = 1 AND [saldoinic" +
+                "ial] IS NULL) OR ([saldoinicial] = @Original_saldoinicial)) AND ((@IsNull_agua =" +
+                " 1 AND [agua] IS NULL) OR ([agua] = @Original_agua)) AND ((@IsNull_electricidad " +
+                "= 1 AND [electricidad] IS NULL) OR ([electricidad] = @Original_electricidad)) AN" +
+                "D ((@IsNull_telefonia = 1 AND [telefonia] IS NULL) OR ([telefonia] = @Original_t" +
+                "elefonia)) AND ((@IsNull_reparaciones = 1 AND [reparaciones] IS NULL) OR ([repar" +
+                "aciones] = @Original_reparaciones)) AND ((@IsNull_indemnizaciones = 1 AND [indem" +
+                "nizaciones] IS NULL) OR ([indemnizaciones] = @Original_indemnizaciones)) AND ((@" +
+                "IsNull_limpieza = 1 AND [limpieza] IS NULL) OR ([limpieza] = @Original_limpieza)" +
+                ") AND ((@IsNull_ascensor = 1 AND [ascensor] IS NULL) OR ([ascensor] = @Original_" +
+                "ascensor)) AND ((@IsNull_extintores = 1 AND [extintores] IS NULL) OR ([extintore" +
+                "s] = @Original_extintores)) AND ((@IsNull_jardines = 1 AND [jardines] IS NULL) O" +
+                "R ([jardines] = @Original_jardines)) AND ((@IsNull_otros = 1 AND [otros] IS NULL" +
+                ") OR ([otros] = @Original_otros)) AND ((@IsNull_compras = 1 AND [compras] IS NUL" +
+                "L) OR ([compras] = @Original_compras)) AND ((@IsNull_gestoria = 1 AND [gestoria]" +
+                " IS NULL) OR ([gestoria] = @Original_gestoria)) AND ((@IsNull_letrados = 1 AND [" +
+                "letrados] IS NULL) OR ([letrados] = @Original_letrados)) AND ((@IsNull_sueldos =" +
+                " 1 AND [sueldos] IS NULL) OR ([sueldos] = @Original_sueldos)) AND ((@IsNull_segs" +
+                "ocial = 1 AND [segsocial] IS NULL) OR ([segsocial] = @Original_segsocial)) AND (" +
+                "(@IsNull_seguros = 1 AND [seguros] IS NULL) OR ([seguros] = @Original_seguros)) " +
+                "AND ((@IsNull_gastosfinancieros = 1 AND [gastosfinancieros] IS NULL) OR ([gastos" +
+                "financieros] = @Original_gastosfinancieros)) AND ((@IsNull_numeropropietarios = " +
+                "1 AND [numeropropietarios] IS NULL) OR ([numeropropietarios] = @Original_numerop" +
+                "ropietarios)) AND ((@IsNull_activa = 1 AND [activa] IS NULL) OR ([activa] = @Ori" +
+                "ginal_activa)));\r\nSELECT numerador, nombrecomunidad, nif, direcion, cp, localida" +
+                "d, provincia, mail, telefono1, telefono2, iban1, iban2, iban3, iban4, iban5, iba" +
+                "n6, presupuesto, porcoeficiente, porcuotafija, cuotamensual, saldoinicial, agua," +
+                " electricidad, telefonia, reparaciones, indemnizaciones, limpieza, ascensor, ext" +
+                "intores, jardines, otros, compras, gestoria, letrados, sueldos, segsocial, segur" +
+                "os, gastosfinancieros, numeropropietarios, activa FROM Comunidades WHERE (numera" +
+                "dor = @numerador)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numerador", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "numerador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombrecomunidad", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombrecomunidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nif", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nif", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@direcion", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "direcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cp", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@localidad", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "localidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@provincia", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "provincia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefono1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefono2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban3", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban4", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban5", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iban6", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@presupuesto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "presupuesto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@porcoeficiente", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcoeficiente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@porcuotafija", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcuotafija", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cuotamensual", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "cuotamensual", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@saldoinicial", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "saldoinicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@agua", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "agua", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@electricidad", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "electricidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefonia", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "telefonia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reparaciones", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "reparaciones", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@indemnizaciones", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "indemnizaciones", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@limpieza", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "limpieza", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ascensor", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ascensor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@extintores", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "extintores", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@jardines", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "jardines", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@otros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "otros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@compras", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "compras", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gestoria", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gestoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@letrados", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "letrados", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sueldos", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "sueldos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@segsocial", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "segsocial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seguros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "seguros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gastosfinancieros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gastosfinancieros", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numeropropietarios", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "numeropropietarios", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@activa", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "activa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numerador", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "numerador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nombrecomunidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombrecomunidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombrecomunidad", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombrecomunidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nif", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nif", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nif", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nif", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_direcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "direcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_direcion", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "direcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cp", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_localidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "localidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_localidad", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "localidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_provincia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "provincia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_provincia", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "provincia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_mail", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mail", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mail", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telefono1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefono1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telefono2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefono2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban3", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban4", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban4", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban5", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban5", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_iban6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban6", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_iban6", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iban6", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_presupuesto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "presupuesto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_presupuesto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "presupuesto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_porcoeficiente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcoeficiente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_porcoeficiente", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcoeficiente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_porcuotafija", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcuotafija", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_porcuotafija", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "porcuotafija", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cuotamensual", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cuotamensual", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cuotamensual", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "cuotamensual", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_saldoinicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "saldoinicial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_saldoinicial", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "saldoinicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_agua", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "agua", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_agua", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "agua", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_electricidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "electricidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_electricidad", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "electricidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_telefonia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefonia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefonia", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "telefonia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_reparaciones", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reparaciones", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reparaciones", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "reparaciones", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_indemnizaciones", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "indemnizaciones", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_indemnizaciones", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "indemnizaciones", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_limpieza", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "limpieza", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_limpieza", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "limpieza", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ascensor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ascensor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ascensor", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ascensor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_extintores", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "extintores", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_extintores", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "extintores", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_jardines", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "jardines", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_jardines", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "jardines", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_otros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "otros", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_otros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "otros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_compras", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "compras", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_compras", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "compras", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_gestoria", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gestoria", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gestoria", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gestoria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_letrados", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "letrados", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_letrados", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "letrados", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sueldos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sueldos", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sueldos", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "sueldos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_segsocial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "segsocial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_segsocial", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "segsocial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_seguros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "seguros", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_seguros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "seguros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_gastosfinancieros", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gastosfinancieros", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gastosfinancieros", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "gastosfinancieros", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_numeropropietarios", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numeropropietarios", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numeropropietarios", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "numeropropietarios", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_activa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "activa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_activa", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "activa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ProyectoComunidad.Properties.Settings.Default.AdministracionComunidadConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT numerador, nombrecomunidad, nif, direcion, cp, localidad, provincia, mail, telefono1, telefono2, iban1, iban2, iban3, iban4, iban5, iban6, presupuesto, porcoeficiente, porcuotafija, cuotamensual, saldoinicial, agua, electricidad, telefonia, reparaciones, indemnizaciones, limpieza, ascensor, extintores, jardines, otros, compras, gestoria, letrados, sueldos, segsocial, seguros, gastosfinancieros, numeropropietarios, activa FROM dbo.Comunidades";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(AdministracionComunidadDataSet.ComunidadesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual AdministracionComunidadDataSet.ComunidadesDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            AdministracionComunidadDataSet.ComunidadesDataTable dataTable = new AdministracionComunidadDataSet.ComunidadesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(AdministracionComunidadDataSet.ComunidadesDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(AdministracionComunidadDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Comunidades");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    decimal Original_numerador, 
+                    string Original_nombrecomunidad, 
+                    string Original_nif, 
+                    string Original_direcion, 
+                    string Original_cp, 
+                    string Original_localidad, 
+                    string Original_provincia, 
+                    string Original_mail, 
+                    string Original_telefono1, 
+                    string Original_telefono2, 
+                    string Original_iban1, 
+                    string Original_iban2, 
+                    string Original_iban3, 
+                    string Original_iban4, 
+                    string Original_iban5, 
+                    string Original_iban6, 
+                    global::System.Nullable<decimal> Original_presupuesto, 
+                    global::System.Nullable<bool> Original_porcoeficiente, 
+                    global::System.Nullable<bool> Original_porcuotafija, 
+                    global::System.Nullable<decimal> Original_cuotamensual, 
+                    global::System.Nullable<decimal> Original_saldoinicial, 
+                    global::System.Nullable<decimal> Original_agua, 
+                    global::System.Nullable<decimal> Original_electricidad, 
+                    global::System.Nullable<decimal> Original_telefonia, 
+                    global::System.Nullable<decimal> Original_reparaciones, 
+                    global::System.Nullable<decimal> Original_indemnizaciones, 
+                    global::System.Nullable<decimal> Original_limpieza, 
+                    global::System.Nullable<decimal> Original_ascensor, 
+                    global::System.Nullable<decimal> Original_extintores, 
+                    global::System.Nullable<decimal> Original_jardines, 
+                    global::System.Nullable<decimal> Original_otros, 
+                    global::System.Nullable<decimal> Original_compras, 
+                    global::System.Nullable<decimal> Original_gestoria, 
+                    global::System.Nullable<decimal> Original_letrados, 
+                    global::System.Nullable<decimal> Original_sueldos, 
+                    global::System.Nullable<decimal> Original_segsocial, 
+                    global::System.Nullable<decimal> Original_seguros, 
+                    global::System.Nullable<decimal> Original_gastosfinancieros, 
+                    global::System.Nullable<decimal> Original_numeropropietarios, 
+                    global::System.Nullable<bool> Original_activa) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_numerador));
+            if ((Original_nombrecomunidad == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_nombrecomunidad));
+            }
+            if ((Original_nif == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_nif));
+            }
+            if ((Original_direcion == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_direcion));
+            }
+            if ((Original_cp == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_cp));
+            }
+            if ((Original_localidad == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_localidad));
+            }
+            if ((Original_provincia == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_provincia));
+            }
+            if ((Original_mail == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_mail));
+            }
+            if ((Original_telefono1 == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_telefono1));
+            }
+            if ((Original_telefono2 == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_telefono2));
+            }
+            if ((Original_iban1 == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_iban1));
+            }
+            if ((Original_iban2 == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_iban2));
+            }
+            if ((Original_iban3 == null)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_iban3));
+            }
+            if ((Original_iban4 == null)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_iban4));
+            }
+            if ((Original_iban5 == null)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_iban5));
+            }
+            if ((Original_iban6 == null)) {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_iban6));
+            }
+            if ((Original_presupuesto.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((decimal)(Original_presupuesto.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_porcoeficiente.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((bool)(Original_porcoeficiente.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((Original_porcuotafija.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((bool)(Original_porcuotafija.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cuotamensual.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((decimal)(Original_cuotamensual.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((Original_saldoinicial.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[40].Value = ((decimal)(Original_saldoinicial.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            if ((Original_agua.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((decimal)(Original_agua.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((Original_electricidad.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[44].Value = ((decimal)(Original_electricidad.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((Original_telefonia.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((decimal)(Original_telefonia.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((Original_reparaciones.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((decimal)(Original_reparaciones.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((Original_indemnizaciones.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((decimal)(Original_indemnizaciones.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            if ((Original_limpieza.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((decimal)(Original_limpieza.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ascensor.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[54].Value = ((decimal)(Original_ascensor.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            if ((Original_extintores.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[56].Value = ((decimal)(Original_extintores.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            if ((Original_jardines.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[58].Value = ((decimal)(Original_jardines.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            if ((Original_otros.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[60].Value = ((decimal)(Original_otros.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[60].Value = global::System.DBNull.Value;
+            }
+            if ((Original_compras.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[62].Value = ((decimal)(Original_compras.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[61].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[62].Value = global::System.DBNull.Value;
+            }
+            if ((Original_gestoria.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[63].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[64].Value = ((decimal)(Original_gestoria.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[63].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[64].Value = global::System.DBNull.Value;
+            }
+            if ((Original_letrados.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[65].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[66].Value = ((decimal)(Original_letrados.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[65].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[66].Value = global::System.DBNull.Value;
+            }
+            if ((Original_sueldos.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[67].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[68].Value = ((decimal)(Original_sueldos.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[67].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[68].Value = global::System.DBNull.Value;
+            }
+            if ((Original_segsocial.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[69].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[70].Value = ((decimal)(Original_segsocial.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[69].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[70].Value = global::System.DBNull.Value;
+            }
+            if ((Original_seguros.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[72].Value = ((decimal)(Original_seguros.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[72].Value = global::System.DBNull.Value;
+            }
+            if ((Original_gastosfinancieros.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[74].Value = ((decimal)(Original_gastosfinancieros.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[74].Value = global::System.DBNull.Value;
+            }
+            if ((Original_numeropropietarios.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[76].Value = ((decimal)(Original_numeropropietarios.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[76].Value = global::System.DBNull.Value;
+            }
+            if ((Original_activa.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[77].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[78].Value = ((bool)(Original_activa.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[77].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[78].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    decimal numerador, 
+                    string nombrecomunidad, 
+                    string nif, 
+                    string direcion, 
+                    string cp, 
+                    string localidad, 
+                    string provincia, 
+                    string mail, 
+                    string telefono1, 
+                    string telefono2, 
+                    string iban1, 
+                    string iban2, 
+                    string iban3, 
+                    string iban4, 
+                    string iban5, 
+                    string iban6, 
+                    global::System.Nullable<decimal> presupuesto, 
+                    global::System.Nullable<bool> porcoeficiente, 
+                    global::System.Nullable<bool> porcuotafija, 
+                    global::System.Nullable<decimal> cuotamensual, 
+                    global::System.Nullable<decimal> saldoinicial, 
+                    global::System.Nullable<decimal> agua, 
+                    global::System.Nullable<decimal> electricidad, 
+                    global::System.Nullable<decimal> telefonia, 
+                    global::System.Nullable<decimal> reparaciones, 
+                    global::System.Nullable<decimal> indemnizaciones, 
+                    global::System.Nullable<decimal> limpieza, 
+                    global::System.Nullable<decimal> ascensor, 
+                    global::System.Nullable<decimal> extintores, 
+                    global::System.Nullable<decimal> jardines, 
+                    global::System.Nullable<decimal> otros, 
+                    global::System.Nullable<decimal> compras, 
+                    global::System.Nullable<decimal> gestoria, 
+                    global::System.Nullable<decimal> letrados, 
+                    global::System.Nullable<decimal> sueldos, 
+                    global::System.Nullable<decimal> segsocial, 
+                    global::System.Nullable<decimal> seguros, 
+                    global::System.Nullable<decimal> gastosfinancieros, 
+                    global::System.Nullable<decimal> numeropropietarios, 
+                    global::System.Nullable<bool> activa) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(numerador));
+            if ((nombrecomunidad == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nombrecomunidad));
+            }
+            if ((nif == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(nif));
+            }
+            if ((direcion == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(direcion));
+            }
+            if ((cp == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(cp));
+            }
+            if ((localidad == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(localidad));
+            }
+            if ((provincia == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(provincia));
+            }
+            if ((mail == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(mail));
+            }
+            if ((telefono1 == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(telefono1));
+            }
+            if ((telefono2 == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(telefono2));
+            }
+            if ((iban1 == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(iban1));
+            }
+            if ((iban2 == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(iban2));
+            }
+            if ((iban3 == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(iban3));
+            }
+            if ((iban4 == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(iban4));
+            }
+            if ((iban5 == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(iban5));
+            }
+            if ((iban6 == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(iban6));
+            }
+            if ((presupuesto.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((decimal)(presupuesto.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((porcoeficiente.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((bool)(porcoeficiente.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((porcuotafija.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(porcuotafija.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((cuotamensual.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((decimal)(cuotamensual.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((saldoinicial.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((decimal)(saldoinicial.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((agua.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((decimal)(agua.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((electricidad.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((decimal)(electricidad.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((telefonia.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((decimal)(telefonia.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((reparaciones.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((decimal)(reparaciones.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((indemnizaciones.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((decimal)(indemnizaciones.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((limpieza.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((decimal)(limpieza.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((ascensor.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((decimal)(ascensor.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((extintores.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[28].Value = ((decimal)(extintores.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((jardines.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[29].Value = ((decimal)(jardines.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((otros.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((decimal)(otros.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((compras.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[31].Value = ((decimal)(compras.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((gestoria.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[32].Value = ((decimal)(gestoria.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((letrados.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[33].Value = ((decimal)(letrados.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((sueldos.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[34].Value = ((decimal)(sueldos.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((segsocial.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[35].Value = ((decimal)(segsocial.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((seguros.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[36].Value = ((decimal)(seguros.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            if ((gastosfinancieros.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[37].Value = ((decimal)(gastosfinancieros.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((numeropropietarios.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[38].Value = ((decimal)(numeropropietarios.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((activa.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[39].Value = ((bool)(activa.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    decimal numerador, 
+                    string nombrecomunidad, 
+                    string nif, 
+                    string direcion, 
+                    string cp, 
+                    string localidad, 
+                    string provincia, 
+                    string mail, 
+                    string telefono1, 
+                    string telefono2, 
+                    string iban1, 
+                    string iban2, 
+                    string iban3, 
+                    string iban4, 
+                    string iban5, 
+                    string iban6, 
+                    global::System.Nullable<decimal> presupuesto, 
+                    global::System.Nullable<bool> porcoeficiente, 
+                    global::System.Nullable<bool> porcuotafija, 
+                    global::System.Nullable<decimal> cuotamensual, 
+                    global::System.Nullable<decimal> saldoinicial, 
+                    global::System.Nullable<decimal> agua, 
+                    global::System.Nullable<decimal> electricidad, 
+                    global::System.Nullable<decimal> telefonia, 
+                    global::System.Nullable<decimal> reparaciones, 
+                    global::System.Nullable<decimal> indemnizaciones, 
+                    global::System.Nullable<decimal> limpieza, 
+                    global::System.Nullable<decimal> ascensor, 
+                    global::System.Nullable<decimal> extintores, 
+                    global::System.Nullable<decimal> jardines, 
+                    global::System.Nullable<decimal> otros, 
+                    global::System.Nullable<decimal> compras, 
+                    global::System.Nullable<decimal> gestoria, 
+                    global::System.Nullable<decimal> letrados, 
+                    global::System.Nullable<decimal> sueldos, 
+                    global::System.Nullable<decimal> segsocial, 
+                    global::System.Nullable<decimal> seguros, 
+                    global::System.Nullable<decimal> gastosfinancieros, 
+                    global::System.Nullable<decimal> numeropropietarios, 
+                    global::System.Nullable<bool> activa, 
+                    decimal Original_numerador, 
+                    string Original_nombrecomunidad, 
+                    string Original_nif, 
+                    string Original_direcion, 
+                    string Original_cp, 
+                    string Original_localidad, 
+                    string Original_provincia, 
+                    string Original_mail, 
+                    string Original_telefono1, 
+                    string Original_telefono2, 
+                    string Original_iban1, 
+                    string Original_iban2, 
+                    string Original_iban3, 
+                    string Original_iban4, 
+                    string Original_iban5, 
+                    string Original_iban6, 
+                    global::System.Nullable<decimal> Original_presupuesto, 
+                    global::System.Nullable<bool> Original_porcoeficiente, 
+                    global::System.Nullable<bool> Original_porcuotafija, 
+                    global::System.Nullable<decimal> Original_cuotamensual, 
+                    global::System.Nullable<decimal> Original_saldoinicial, 
+                    global::System.Nullable<decimal> Original_agua, 
+                    global::System.Nullable<decimal> Original_electricidad, 
+                    global::System.Nullable<decimal> Original_telefonia, 
+                    global::System.Nullable<decimal> Original_reparaciones, 
+                    global::System.Nullable<decimal> Original_indemnizaciones, 
+                    global::System.Nullable<decimal> Original_limpieza, 
+                    global::System.Nullable<decimal> Original_ascensor, 
+                    global::System.Nullable<decimal> Original_extintores, 
+                    global::System.Nullable<decimal> Original_jardines, 
+                    global::System.Nullable<decimal> Original_otros, 
+                    global::System.Nullable<decimal> Original_compras, 
+                    global::System.Nullable<decimal> Original_gestoria, 
+                    global::System.Nullable<decimal> Original_letrados, 
+                    global::System.Nullable<decimal> Original_sueldos, 
+                    global::System.Nullable<decimal> Original_segsocial, 
+                    global::System.Nullable<decimal> Original_seguros, 
+                    global::System.Nullable<decimal> Original_gastosfinancieros, 
+                    global::System.Nullable<decimal> Original_numeropropietarios, 
+                    global::System.Nullable<bool> Original_activa) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(numerador));
+            if ((nombrecomunidad == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nombrecomunidad));
+            }
+            if ((nif == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(nif));
+            }
+            if ((direcion == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(direcion));
+            }
+            if ((cp == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(cp));
+            }
+            if ((localidad == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(localidad));
+            }
+            if ((provincia == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(provincia));
+            }
+            if ((mail == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(mail));
+            }
+            if ((telefono1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(telefono1));
+            }
+            if ((telefono2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(telefono2));
+            }
+            if ((iban1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(iban1));
+            }
+            if ((iban2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(iban2));
+            }
+            if ((iban3 == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(iban3));
+            }
+            if ((iban4 == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(iban4));
+            }
+            if ((iban5 == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(iban5));
+            }
+            if ((iban6 == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(iban6));
+            }
+            if ((presupuesto.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(presupuesto.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((porcoeficiente.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(porcoeficiente.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((porcuotafija.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(porcuotafija.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((cuotamensual.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(cuotamensual.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((saldoinicial.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(saldoinicial.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((agua.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((decimal)(agua.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((electricidad.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(electricidad.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((telefonia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((decimal)(telefonia.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((reparaciones.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(reparaciones.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((indemnizaciones.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(indemnizaciones.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((limpieza.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((decimal)(limpieza.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((ascensor.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((decimal)(ascensor.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((extintores.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((decimal)(extintores.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((jardines.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(jardines.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((otros.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((decimal)(otros.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((compras.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((decimal)(compras.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((gestoria.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(gestoria.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((letrados.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((decimal)(letrados.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((sueldos.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((decimal)(sueldos.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((segsocial.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((decimal)(segsocial.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((seguros.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((decimal)(seguros.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            if ((gastosfinancieros.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((decimal)(gastosfinancieros.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((numeropropietarios.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((decimal)(numeropropietarios.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((activa.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((bool)(activa.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((decimal)(Original_numerador));
+            if ((Original_nombrecomunidad == null)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_nombrecomunidad));
+            }
+            if ((Original_nif == null)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_nif));
+            }
+            if ((Original_direcion == null)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_direcion));
+            }
+            if ((Original_cp == null)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_cp));
+            }
+            if ((Original_localidad == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_localidad));
+            }
+            if ((Original_provincia == null)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_provincia));
+            }
+            if ((Original_mail == null)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_mail));
+            }
+            if ((Original_telefono1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_telefono1));
+            }
+            if ((Original_telefono2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_telefono2));
+            }
+            if ((Original_iban1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_iban1));
+            }
+            if ((Original_iban2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_iban2));
+            }
+            if ((Original_iban3 == null)) {
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_iban3));
+            }
+            if ((Original_iban4 == null)) {
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_iban4));
+            }
+            if ((Original_iban5 == null)) {
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_iban5));
+            }
+            if ((Original_iban6 == null)) {
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(Original_iban6));
+            }
+            if ((Original_presupuesto.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((decimal)(Original_presupuesto.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
+            }
+            if ((Original_porcoeficiente.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((bool)(Original_porcoeficiente.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
+            }
+            if ((Original_porcuotafija.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((bool)(Original_porcuotafija.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cuotamensual.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((decimal)(Original_cuotamensual.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
+            }
+            if ((Original_saldoinicial.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((decimal)(Original_saldoinicial.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
+            }
+            if ((Original_agua.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((decimal)(Original_agua.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
+            }
+            if ((Original_electricidad.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((decimal)(Original_electricidad.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[84].Value = global::System.DBNull.Value;
+            }
+            if ((Original_telefonia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[86].Value = ((decimal)(Original_telefonia.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[86].Value = global::System.DBNull.Value;
+            }
+            if ((Original_reparaciones.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[88].Value = ((decimal)(Original_reparaciones.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[88].Value = global::System.DBNull.Value;
+            }
+            if ((Original_indemnizaciones.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[90].Value = ((decimal)(Original_indemnizaciones.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[90].Value = global::System.DBNull.Value;
+            }
+            if ((Original_limpieza.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[92].Value = ((decimal)(Original_limpieza.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[92].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ascensor.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[94].Value = ((decimal)(Original_ascensor.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[94].Value = global::System.DBNull.Value;
+            }
+            if ((Original_extintores.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[95].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[96].Value = ((decimal)(Original_extintores.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[95].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[96].Value = global::System.DBNull.Value;
+            }
+            if ((Original_jardines.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[98].Value = ((decimal)(Original_jardines.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[98].Value = global::System.DBNull.Value;
+            }
+            if ((Original_otros.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[100].Value = ((decimal)(Original_otros.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[100].Value = global::System.DBNull.Value;
+            }
+            if ((Original_compras.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[101].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[102].Value = ((decimal)(Original_compras.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[101].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[102].Value = global::System.DBNull.Value;
+            }
+            if ((Original_gestoria.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[103].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[104].Value = ((decimal)(Original_gestoria.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[103].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[104].Value = global::System.DBNull.Value;
+            }
+            if ((Original_letrados.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[105].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[106].Value = ((decimal)(Original_letrados.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[105].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[106].Value = global::System.DBNull.Value;
+            }
+            if ((Original_sueldos.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[107].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[108].Value = ((decimal)(Original_sueldos.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[107].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[108].Value = global::System.DBNull.Value;
+            }
+            if ((Original_segsocial.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[109].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[110].Value = ((decimal)(Original_segsocial.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[109].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[110].Value = global::System.DBNull.Value;
+            }
+            if ((Original_seguros.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[111].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[112].Value = ((decimal)(Original_seguros.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[111].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[112].Value = global::System.DBNull.Value;
+            }
+            if ((Original_gastosfinancieros.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[113].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[114].Value = ((decimal)(Original_gastosfinancieros.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[113].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[114].Value = global::System.DBNull.Value;
+            }
+            if ((Original_numeropropietarios.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[115].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[116].Value = ((decimal)(Original_numeropropietarios.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[115].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[116].Value = global::System.DBNull.Value;
+            }
+            if ((Original_activa.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[117].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[118].Value = ((bool)(Original_activa.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[117].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[118].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string nombrecomunidad, 
+                    string nif, 
+                    string direcion, 
+                    string cp, 
+                    string localidad, 
+                    string provincia, 
+                    string mail, 
+                    string telefono1, 
+                    string telefono2, 
+                    string iban1, 
+                    string iban2, 
+                    string iban3, 
+                    string iban4, 
+                    string iban5, 
+                    string iban6, 
+                    global::System.Nullable<decimal> presupuesto, 
+                    global::System.Nullable<bool> porcoeficiente, 
+                    global::System.Nullable<bool> porcuotafija, 
+                    global::System.Nullable<decimal> cuotamensual, 
+                    global::System.Nullable<decimal> saldoinicial, 
+                    global::System.Nullable<decimal> agua, 
+                    global::System.Nullable<decimal> electricidad, 
+                    global::System.Nullable<decimal> telefonia, 
+                    global::System.Nullable<decimal> reparaciones, 
+                    global::System.Nullable<decimal> indemnizaciones, 
+                    global::System.Nullable<decimal> limpieza, 
+                    global::System.Nullable<decimal> ascensor, 
+                    global::System.Nullable<decimal> extintores, 
+                    global::System.Nullable<decimal> jardines, 
+                    global::System.Nullable<decimal> otros, 
+                    global::System.Nullable<decimal> compras, 
+                    global::System.Nullable<decimal> gestoria, 
+                    global::System.Nullable<decimal> letrados, 
+                    global::System.Nullable<decimal> sueldos, 
+                    global::System.Nullable<decimal> segsocial, 
+                    global::System.Nullable<decimal> seguros, 
+                    global::System.Nullable<decimal> gastosfinancieros, 
+                    global::System.Nullable<decimal> numeropropietarios, 
+                    global::System.Nullable<bool> activa, 
+                    decimal Original_numerador, 
+                    string Original_nombrecomunidad, 
+                    string Original_nif, 
+                    string Original_direcion, 
+                    string Original_cp, 
+                    string Original_localidad, 
+                    string Original_provincia, 
+                    string Original_mail, 
+                    string Original_telefono1, 
+                    string Original_telefono2, 
+                    string Original_iban1, 
+                    string Original_iban2, 
+                    string Original_iban3, 
+                    string Original_iban4, 
+                    string Original_iban5, 
+                    string Original_iban6, 
+                    global::System.Nullable<decimal> Original_presupuesto, 
+                    global::System.Nullable<bool> Original_porcoeficiente, 
+                    global::System.Nullable<bool> Original_porcuotafija, 
+                    global::System.Nullable<decimal> Original_cuotamensual, 
+                    global::System.Nullable<decimal> Original_saldoinicial, 
+                    global::System.Nullable<decimal> Original_agua, 
+                    global::System.Nullable<decimal> Original_electricidad, 
+                    global::System.Nullable<decimal> Original_telefonia, 
+                    global::System.Nullable<decimal> Original_reparaciones, 
+                    global::System.Nullable<decimal> Original_indemnizaciones, 
+                    global::System.Nullable<decimal> Original_limpieza, 
+                    global::System.Nullable<decimal> Original_ascensor, 
+                    global::System.Nullable<decimal> Original_extintores, 
+                    global::System.Nullable<decimal> Original_jardines, 
+                    global::System.Nullable<decimal> Original_otros, 
+                    global::System.Nullable<decimal> Original_compras, 
+                    global::System.Nullable<decimal> Original_gestoria, 
+                    global::System.Nullable<decimal> Original_letrados, 
+                    global::System.Nullable<decimal> Original_sueldos, 
+                    global::System.Nullable<decimal> Original_segsocial, 
+                    global::System.Nullable<decimal> Original_seguros, 
+                    global::System.Nullable<decimal> Original_gastosfinancieros, 
+                    global::System.Nullable<decimal> Original_numeropropietarios, 
+                    global::System.Nullable<bool> Original_activa) {
+            return this.Update(Original_numerador, nombrecomunidad, nif, direcion, cp, localidad, provincia, mail, telefono1, telefono2, iban1, iban2, iban3, iban4, iban5, iban6, presupuesto, porcoeficiente, porcuotafija, cuotamensual, saldoinicial, agua, electricidad, telefonia, reparaciones, indemnizaciones, limpieza, ascensor, extintores, jardines, otros, compras, gestoria, letrados, sueldos, segsocial, seguros, gastosfinancieros, numeropropietarios, activa, Original_numerador, Original_nombrecomunidad, Original_nif, Original_direcion, Original_cp, Original_localidad, Original_provincia, Original_mail, Original_telefono1, Original_telefono2, Original_iban1, Original_iban2, Original_iban3, Original_iban4, Original_iban5, Original_iban6, Original_presupuesto, Original_porcoeficiente, Original_porcuotafija, Original_cuotamensual, Original_saldoinicial, Original_agua, Original_electricidad, Original_telefonia, Original_reparaciones, Original_indemnizaciones, Original_limpieza, Original_ascensor, Original_extintores, Original_jardines, Original_otros, Original_compras, Original_gestoria, Original_letrados, Original_sueldos, Original_segsocial, Original_seguros, Original_gastosfinancieros, Original_numeropropietarios, Original_activa);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -8187,6 +12234,8 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
         private PropiosTableAdapter _propiosTableAdapter;
         
         private UsantesTableAdapter _usantesTableAdapter;
+        
+        private ComunidadesTableAdapter _comunidadesTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -8261,6 +12310,20 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public ComunidadesTableAdapter ComunidadesTableAdapter {
+            get {
+                return this._comunidadesTableAdapter;
+            }
+            set {
+                this._comunidadesTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -8294,6 +12357,10 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
                             && (this._usantesTableAdapter.Connection != null))) {
                     return this._usantesTableAdapter.Connection;
                 }
+                if (((this._comunidadesTableAdapter != null) 
+                            && (this._comunidadesTableAdapter.Connection != null))) {
+                    return this._comunidadesTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -8317,6 +12384,9 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
                     count = (count + 1);
                 }
                 if ((this._usantesTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._comunidadesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -8366,6 +12436,15 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._comunidadesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Comunidades.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._comunidadesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -8408,6 +12487,14 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._comunidadesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Comunidades.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._comunidadesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -8418,6 +12505,14 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(AdministracionComunidadDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._comunidadesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Comunidades.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._comunidadesTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._usantesTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Usantes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -8509,6 +12604,11 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
+            if (((this._comunidadesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._comunidadesTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
+                        "sma cadena de conexión.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager no contiene información de conexión. Establezca cada propieda" +
@@ -8575,6 +12675,15 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
                     if (this._usantesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._usantesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._usantesTableAdapter.Adapter);
+                    }
+                }
+                if ((this._comunidadesTableAdapter != null)) {
+                    revertConnections.Add(this._comunidadesTableAdapter, this._comunidadesTableAdapter.Connection);
+                    this._comunidadesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._comunidadesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._comunidadesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._comunidadesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._comunidadesTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -8650,6 +12759,10 @@ SELECT numerador, nombre, password, pregunta, respuesta, activo, cod, nivel FROM
                 if ((this._usantesTableAdapter != null)) {
                     this._usantesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._usantesTableAdapter]));
                     this._usantesTableAdapter.Transaction = null;
+                }
+                if ((this._comunidadesTableAdapter != null)) {
+                    this._comunidadesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._comunidadesTableAdapter]));
+                    this._comunidadesTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

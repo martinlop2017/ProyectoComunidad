@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionUsuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,6 +75,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(295, 56);
             this.panel1.TabIndex = 64;
+            this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             // 
             // textBox1
             // 
@@ -82,6 +84,9 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(275, 20);
             this.textBox1.TabIndex = 52;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
+            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
             // 
             // label7
             // 
@@ -160,6 +165,8 @@
             this.salir.TabIndex = 56;
             this.salir.UseVisualStyleBackColor = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
+            this.salir.MouseEnter += new System.EventHandler(this.salir_MouseEnter);
+            this.salir.MouseLeave += new System.EventHandler(this.salir_MouseLeave);
             // 
             // modificar
             // 
@@ -171,6 +178,8 @@
             this.modificar.TabIndex = 55;
             this.modificar.UseVisualStyleBackColor = false;
             this.modificar.Click += new System.EventHandler(this.modificar_Click);
+            this.modificar.MouseEnter += new System.EventHandler(this.modificar_MouseEnter);
+            this.modificar.MouseLeave += new System.EventHandler(this.modificar_MouseLeave);
             // 
             // eliminar
             // 
@@ -182,6 +191,8 @@
             this.eliminar.TabIndex = 54;
             this.eliminar.UseVisualStyleBackColor = false;
             this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
+            this.eliminar.MouseEnter += new System.EventHandler(this.eliminar_MouseEnter);
+            this.eliminar.MouseLeave += new System.EventHandler(this.eliminar_MouseLeave);
             // 
             // sumar
             // 
@@ -193,6 +204,8 @@
             this.sumar.TabIndex = 53;
             this.sumar.UseVisualStyleBackColor = false;
             this.sumar.Click += new System.EventHandler(this.sumar_Click);
+            this.sumar.MouseEnter += new System.EventHandler(this.sumar_MouseEnter);
+            this.sumar.MouseLeave += new System.EventHandler(this.sumar_MouseLeave);
             // 
             // dgvUsuario
             // 
@@ -200,14 +213,14 @@
             this.dgvUsuario.AllowUserToDeleteRows = false;
             this.dgvUsuario.AutoGenerateColumns = false;
             this.dgvUsuario.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numeradorDataGridViewTextBoxColumn,
@@ -224,14 +237,14 @@
             this.dgvUsuario.MultiSelect = false;
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsuario.RowHeadersWidth = 20;
             this.dgvUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuario.Size = new System.Drawing.Size(523, 347);
@@ -259,8 +272,8 @@
             // numeradorDataGridViewTextBoxColumn
             // 
             this.numeradorDataGridViewTextBoxColumn.DataPropertyName = "numerador";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.numeradorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.numeradorDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.numeradorDataGridViewTextBoxColumn.HeaderText = "Cod.";
             this.numeradorDataGridViewTextBoxColumn.Name = "numeradorDataGridViewTextBoxColumn";
             this.numeradorDataGridViewTextBoxColumn.ReadOnly = true;
